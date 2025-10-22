@@ -25,6 +25,7 @@ body {
 h1 {
   font-weight: 700;
   font-size: 22px;
+  color: #1f3251;
   font-family: "Outfit Bold", sans-serif;
   padding-top: 10px;
 }
@@ -35,7 +36,7 @@ p {
   color: #68778d;
   font-family: "Outfit Regular", sans-serif;
   max-width: 300px;
-  line-height: 0.1;
+  line-height: 1.5;
 }
 
 img {
@@ -47,8 +48,4 @@ img {
 }
 
 @media (max-width: 375px) {
-  /* .container {
-    background: #000;
-    color: #fff;
-  } */
 }
