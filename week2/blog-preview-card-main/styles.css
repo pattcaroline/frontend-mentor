@@ -64,6 +64,7 @@ p {
 }
 
 .user-profile {
+  margin-top: 24px;
   display: flex;
   flex-direction: row;
   gap: 12px;
@@ -79,4 +80,10 @@ p {
 .user-profile h2 {
   font-size: 14px;
   font-weight: bold;
+}
+
+@media (max-width: 375px) {
+  .container {
+    width: 325px;
+  }
 }
