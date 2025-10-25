@@ -67,7 +67,7 @@ img {
   font-weight: 700;
 }
 
-.name h2 {
+.name .location {
   color: var(--green);
   font-weight: 600;
   font-size: 14px;
@@ -82,6 +82,8 @@ img {
 /* SECTION CONNECT  */
 
 .connect {
+  width: 100%;
+  list-style-type: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -89,15 +91,19 @@ img {
   height: auto;
 }
 
-.btn {
-  text-decoration: none;
+.connect .btn {
   background-color: var(--grey-700);
-  color: var(--white);
-  font-size: 14px;
-  font-weight: 600;
   padding: 12px 12px;
   border-radius: 8px;
   text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.connect .btn a {
+  color: inherit;
+  text-decoration: none;
 }
 
 /* ACTIVE BUTTON STATE */
