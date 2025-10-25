@@ -43,7 +43,7 @@ body {
   justify-items: center;
   align-items: center;
   line-height: 1.5rem;
-  margin-bottom: 12px;
+  margin-bottom: 24px;
 }
 
 .name {
@@ -67,7 +67,7 @@ img {
   font-weight: 700;
 }
 
-.name h3 {
+.name h2 {
   color: var(--green);
   font-weight: 600;
   font-size: 14px;
@@ -89,24 +89,25 @@ img {
   height: 289px;
 }
 
-button {
+.btn {
+  text-decoration: none;
   background-color: var(--grey-700);
   color: var(--white);
   font-size: 14px;
   font-weight: 600;
   padding: 12px 12px;
   border-radius: 8px;
-  border-style: none;
+  text-align: center;
 }
 
 /* ACTIVE BUTTON STATE */
 
-button:active {
+.btn:active {
   background-color: var(--green);
   color: var(--grey-700);
 }
 
-button:hover {
+.btn:hover {
   background-color: var(--green);
   color: var(--grey-700);
 }
