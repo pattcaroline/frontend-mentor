@@ -13,7 +13,7 @@
   --rose-50: hsl(330, 100%, 98%);
 
   /* FONT FAMILIES and WEIGHTS */
-  --text-preset-1: "Young Serif", serif;
+  --text-preset-1: "Young Serif", sans-serif;
   --text-preset-1-regular: 400;
   --text-preset-3: "Outfit", sans-serif;
   --text-preset-3-regular: 400;
@@ -90,9 +90,11 @@ body {
 }
 
 .recipe-info p {
-  font-weight: var(--text-preset-1-regular);
+  font-family: var(--text-preset-3);
+  font-weight: var(--text-preset-3-regular);
   font-size: var(--font-size-paragraph);
   color: var(--stone-600);
+  line-height: 1.5rem;
 }
 
 /* PREPARATION TIME */
@@ -113,9 +115,13 @@ body {
 }
 
 .prep-time ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
   list-style: none; /* remove all style from ul list */
   padding-left: 0;
   color: var(--stone-600);
+  font-family: var(--text-preset-3);
 }
 
 .prep-time ul li::before {
@@ -127,9 +133,17 @@ body {
   margin-bottom: 8px;
 }
 
-/* INGREDIENTS */
+/* h2 HEADING Ingredients, instruction and nutrition */
 
-.ingredients h2 {
+.ingredients,
+.instructions {
+  border-bottom: 1px solid var(--stone-150);
+  padding-bottom: 32px;
+}
+
+.ingredients h2,
+.instructions h2,
+.nutrition h2 {
   font-family: var(--text-preset-1);
   font-weight: var(--text-preset-1-regular);
   font-size: 28px;
@@ -137,9 +151,15 @@ body {
   margin-bottom: 24px;
 }
 
+/* INGREDIENTS UNORDERED LIST*/
+
 .ingredients ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
   list-style: none;
   padding-left: 0;
+  font-family: var(--text-preset-3);
   color: var(--stone-600);
 }
 
@@ -150,4 +170,59 @@ body {
   margin-bottom: 8px;
   color: var(--brown-800);
   width: 40px;
+}
+
+/* INSTRUCTION ORDERED LIST */
+
+.instructions ol {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  list-style: none;
+  counter-reset: item;
+  padding: 0;
+  font-family: var(--text-preset-3);
+  color: var(--stone-600);
+  line-height: 1.5rem;
+}
+
+.instructions ol li {
+  counter-increment: item;
+}
+
+.instructions ol li::before {
+  content: counter(item) ".";
+  margin-right: 16px;
+  color: var(--brown-800);
+  font-weight: var(--text-preset-3-bold);
+}
+
+/* NUTRITION TABLE */
+.nutrition p {
+  margin-bottom: 24px;
+}
+
+.nutrition p,
+.nutrition tbody td {
+  font-family: var(--text-preset-3);
+  font-size: var(--font-size-paragraph);
+  font-weight: var(--text-preset-3-regular);
+  color: var(--stone-600);
+}
+
+.nutrition table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+}
+
+.nutrition td:last-child {
+  font-weight: var(--text-preset-3-bold);
+  color: var(--brown-800);
+  text-align: left;
+}
+
+.nutrition tbody td {
+  padding: 0 0 12px 32px;
+  border-bottom: 1px solid var(--stone-150);
 }
