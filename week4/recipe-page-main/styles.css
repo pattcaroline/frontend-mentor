@@ -226,3 +226,34 @@ body {
   padding: 0 0 12px 32px;
   border-bottom: 1px solid var(--stone-150);
 }
+
+/* Tablet  */
+@media (max-width: 768px) {
+  .container {
+    width: 616px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 375px) {
+  .container {
+    width: 100%;
+    padding: 0;
+  }
+
+  .container-image {
+    display: flex;
+    margin-bottom: 40px;
+    width: cover;
+  }
+
+  .img-hero {
+    height: 171px;
+    border-radius: 0;
+  }
+
+  .container-info {
+    padding: 0 32px;
+  }
+}
