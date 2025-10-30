@@ -37,6 +37,7 @@ body {
   flex-direction: column;
   background-color: var(--stone-100);
   gap: 0;
+  margin: 40px 0;
   width: 100%; /* full width responsive*/
   min-height: 100vh; /*allow it to expand and scroll if needed*/
 }
@@ -188,6 +189,7 @@ body {
 
 .instructions ol li {
   counter-increment: item;
+  display: flex;
 }
 
 .instructions ol li::before {
@@ -195,6 +197,7 @@ body {
   margin-right: 16px;
   color: var(--brown-800);
   font-weight: var(--text-preset-3-bold);
+  flex-shrink: 0;
 }
 
 /* NUTRITION TABLE */
