@@ -37,7 +37,7 @@ body {
   flex-direction: column;
   background-color: var(--stone-100);
   gap: 0;
-  margin: 40px 0;
+  padding: 8rem 3rem;
   width: 100%; /* full width responsive*/
   min-height: 100vh; /*allow it to expand and scroll if needed*/
 }
@@ -48,8 +48,8 @@ body {
   flex-direction: column;
   background-color: var(--white);
   border-radius: 24px;
-  padding: 40px;
-  max-width: 736px;
+  padding: 2.5rem;
+  max-width: 46rem;
   width: 100%;
 }
 
@@ -71,7 +71,7 @@ body {
 .container-info {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 2rem;
   width: 100%;
 }
 
@@ -86,8 +86,8 @@ body {
   font-family: var(--text-preset-1);
   font-weight: var(--text-preset-1-regular);
   color: var(--stone-900);
-  font-size: 40px;
-  margin-bottom: 24px;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .recipe-info p {
@@ -103,8 +103,8 @@ body {
 .prep-time {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  padding: 24px;
+  gap: 1rem;
+  padding: 1.5rem;
   background-color: var(--rose-50);
   border-radius: 12px;
 }
@@ -112,13 +112,13 @@ body {
   color: var(--rose-800);
   font-family: var(--text-preset-3);
   font-weight: var(--text-preset-3-semibold);
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 .prep-time ul {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 0.5rem;
   list-style: none; /* remove all style from ul list */
   padding-left: 0;
   color: var(--stone-600);
@@ -126,12 +126,12 @@ body {
 }
 
 .prep-time ul li::before {
-  padding-left: 8px;
+  padding-left: 0.5rem;
   color: var(--rose-800);
-  width: 40px;
+  width: 2.5rem;
   content: "•";
   display: inline-block;
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
 }
 
 /* h2 HEADING Ingredients, instruction and nutrition */
@@ -139,17 +139,17 @@ body {
 .ingredients,
 .instructions {
   border-bottom: 1px solid var(--stone-150);
-  padding-bottom: 32px;
+  padding-bottom: 2rem;
 }
 
 .ingredients h2,
 .instructions h2,
-.nutrition h2 {
+.nutrition-heading {
   font-family: var(--text-preset-1);
   font-weight: var(--text-preset-1-regular);
-  font-size: 28px;
+  font-size: 1.75rem;
   color: var(--brown-800);
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
 }
 
 /* INGREDIENTS UNORDERED LIST*/
@@ -157,7 +157,7 @@ body {
 .ingredients ul {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 0.5rem;
   list-style: none;
   padding-left: 0;
   font-family: var(--text-preset-3);
@@ -165,12 +165,12 @@ body {
 }
 
 .ingredients ul li::before {
-  padding-left: 8px;
+  padding-left: 0.5rem;
   content: "•";
   display: inline-block;
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
   color: var(--brown-800);
-  width: 40px;
+  width: 2.5rem;
 }
 
 /* INSTRUCTION ORDERED LIST */
@@ -178,7 +178,7 @@ body {
 .instructions ol {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 0.5rem;
   list-style: none;
   counter-reset: item;
   padding: 0;
@@ -194,7 +194,7 @@ body {
 
 .instructions ol li::before {
   content: counter(item) ".";
-  margin-right: 16px;
+  margin-right: 1rem;
   color: var(--brown-800);
   font-weight: var(--text-preset-3-bold);
   flex-shrink: 0;
@@ -202,7 +202,7 @@ body {
 
 /* NUTRITION TABLE */
 .nutrition p {
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
 }
 
 .nutrition p,
@@ -226,37 +226,46 @@ body {
 }
 
 .nutrition tbody td {
-  padding: 0 0 12px 32px;
+  padding: 0 0 0.75rem 2rem;
   border-bottom: 1px solid var(--stone-150);
 }
 
-/* Tablet  */
-@media (max-width: 768px) {
-  .container {
-    width: 616px;
-  }
-}
-
-/* MOBILE */
-
-@media (max-width: 375px) {
-  .container {
-    width: 100%;
-    padding: 0;
+/* Tablet < 768px */
+@media (max-width: 48rem) {
+  .container-info {
+    padding: 1.25rem;
   }
 
   .container-image {
-    display: flex;
-    margin-bottom: 40px;
-    width: cover;
+    display: block;
+    margin-bottom: 2.5rem;
   }
 
   .img-hero {
-    height: 171px;
+    width: 100%;
+    height: auto;
     border-radius: 0;
   }
 
-  .container-info {
-    padding: 0 32px;
+  h1 {
+    font-size: 2rem;
   }
+}
+
+/* MOBILE < 640px */
+@media (max-width: 40rem) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    margin: 0;
+    border-radius: 0;
+  }
+}
+
+/* SMALL MOBILE < 375px */
+
+@media (max-width: 23.4rem) {
 }
