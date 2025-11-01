@@ -213,7 +213,8 @@ body {
 }
 
 .nutrition p,
-.nutrition tbody td {
+.nutrition tbody td,
+.nutrition tbody th {
   font-family: var(--text-preset-3);
   font-size: var(--font-size-paragraph);
   font-weight: var(--text-preset-3-regular);
@@ -232,7 +233,8 @@ body {
   text-align: left;
 }
 
-.nutrition tbody td {
+.nutrition tbody td,
+.nutrition tbody th {
   padding: 0 0 0.75rem 2rem;
   border-bottom: 1px solid var(--stone-150);
 }
@@ -319,7 +321,8 @@ body {
     font-size: 1.625rem;
   }
 
-  .nutrition tbody td {
+  .nutrition tbody td,
+  .nutrition tbody th {
     padding: 0 0 0.75rem 1.5rem;
   }
 }
@@ -343,6 +346,7 @@ body {
   .ingredients ul,
   .instructions ol,
   .nutrition p,
+  .nutrition tbody th,
   .nutrition tbody td {
     font-size: 0.9375rem;
     line-height: 1.4rem;
