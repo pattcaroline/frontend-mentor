@@ -60,10 +60,16 @@ body {
   margin-bottom: 40px;
 }
 
+.image-wrapper {
+  width: 100%;
+}
+
 .img-hero {
   width: 100%; /* fill container*/
   height: 300px;
   border-radius: 12px;
+  object-fit: cover;
+  display: block;
 }
 
 /* CONTAINER INFO */
@@ -88,6 +94,7 @@ body {
   color: var(--stone-900);
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
+  line-height: 1.2rem;
 }
 
 .recipe-info p {
@@ -232,23 +239,35 @@ body {
 
 /* Tablet < 768px */
 @media (max-width: 48rem) {
+  body {
+    padding: 4rem 2rem;
+  }
+  .container {
+    padding: 2rem;
+  }
+
   .container-info {
-    padding: 1.25rem;
+    padding: 1.75rem;
   }
 
   .container-image {
     display: block;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
   }
 
   .img-hero {
     width: 100%;
     height: auto;
-    border-radius: 0;
   }
 
-  h1 {
+  .recipe-info h1 {
     font-size: 2rem;
+  }
+
+  .ingredients h2,
+  .instructions h2,
+  .nutrition-heading {
+    font-size: 1.5rem;
   }
 }
 
@@ -262,10 +281,98 @@ body {
   .container {
     margin: 0;
     border-radius: 0;
+    padding: 0;
+  }
+
+  /* Make image edge-to-edge */
+  .container-image {
+    margin: 0 0 2.5rem 0;
+  }
+
+  .img-hero {
+    height: 200px;
+    display: fit;
+    border-radius: 0;
+  }
+
+  /* Add padding back to content only */
+  .container-info {
+    padding: 0 2rem 2.5rem 2rem;
+    gap: 2rem;
+  }
+
+  .recipe-info h1 {
+    font-size: 2.25rem;
+  }
+
+  .prep-time {
+    padding: 1.25rem;
+  }
+
+  .prep-time h2 {
+    font-size: 1.125rem;
+  }
+
+  .ingredients h2,
+  .instructions h2,
+  .nutrition-heading {
+    font-size: 1.625rem;
+  }
+
+  .nutrition tbody td {
+    padding: 0 0 0.75rem 1.5rem;
   }
 }
 
 /* SMALL MOBILE < 375px */
 
 @media (max-width: 23.4rem) {
+  .container-info {
+    padding: 0 1.5rem 2rem 1.5rem;
+    gap: 1.75rem;
+  }
+
+  .recipe-info h1 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    line-height: 1.75rem;
+  }
+
+  .recipe-info p,
+  .prep-time ul,
+  .ingredients ul,
+  .instructions ol,
+  .nutrition p,
+  .nutrition tbody td {
+    font-size: 0.9375rem;
+    line-height: 1.4rem;
+  }
+
+  .prep-time {
+    padding: 1rem;
+    gap: 0.75rem;
+  }
+
+  .prep-time h2 {
+    font-size: 1rem;
+  }
+
+  .ingredients h2,
+  .instructions h2,
+  .nutrition-heading {
+    font-size: 1.375rem;
+    margin-bottom: 1rem;
+  }
+
+  .img-hero {
+    height: 170px;
+  }
+
+  .nutrition tbody td {
+    padding: 0 0 0.75rem 1rem;
+  }
+
+  .nutrition table {
+    border-spacing: 0 8px;
+  }
 }
