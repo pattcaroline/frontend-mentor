@@ -1,0 +1,90 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: $cream;
+  gap: 0;
+}
+
+.product-card {
+  display: grid;
+  grid-template-columns: repeat(2, 18.75rem); //600px total; 300px each columns
+  max-width: 37.5rem;
+  border-radius: 0.5rem; //8px
+  overflow: hidden; //important to show border-radius working
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  padding: 2rem;
+  gap: 2rem; //space between child elements
+}
+
+.titles {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.prices {
+  display: flex;
+  flex-direction: row;
+}
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-type {
+  @include text-preset(4);
+  color: $grey;
+}
+
+.product-title {
+  @include text-preset(1);
+  color: $black;
+}
+
+.description-product {
+  @include text-preset(3);
+  color: $grey;
+}
+
+.price-green {
+  @include text-preset(1);
+  color: $green-500;
+}
+
+.price-grey {
+  @include text-preset(5);
+  color: $grey;
+}
+
+.btn-add {
+  @include text-preset(2);
+  background-color: $green-500;
+  color: $white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+}
