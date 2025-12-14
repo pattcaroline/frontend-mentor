@@ -78,6 +78,11 @@ html {
 .price-grey {
   @include text-preset(5);
   color: $grey;
+  text-decoration: line-through;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 1rem;
 }
 
 .btn-add {
@@ -87,4 +92,20 @@ html {
   border: none;
   padding: 1rem 2rem;
   border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-add:hover {
+  background-color: $green-700;
+}
+
+// Mobile < 640px
+@media (max-width: 40rem) {
+  .product-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 350px;
+  }
 }
