@@ -1,0 +1,50 @@
+// Typography
+
+// Font Families
+$font-poppins: "Poppins", sans-serif;
+
+// Font Weights
+$font-weight-extra-light: 200;
+$font-weight-regular: 400;
+$font-weight-semibold: 600;
+
+// Font Sizes
+$font-size-36: 2.25rem; //36px
+$font-size-24: 1.5rem; //24px
+$font-size-20: 1.25rem; //20px
+$font-size-15: 0.9375rem; //15px
+$font-size-13: 0.8125rem; //13px
+
+// Text Preset
+$text-presets: (
+  1: (
+    weight: $font-weight-semibold,
+    size: $font-size-24,
+    line-height: 1.4,
+    letter-spacing: 0.25px,
+  ),
+  2: (
+    weight: $font-weight-extra-light,
+    size: $font-size-24,
+    line-height: 1.4,
+    letter-spacing: 0.25px,
+  ),
+  3: (
+    weight: $font-weight-semibold,
+    size: $font-size-20,
+    line-height: 1.35,
+    letter-spacing: 0,
+  ),
+  4: (
+    weight: $font-weight-regular,
+    size: $font-size-15,
+    line-height: 1.4,
+    letter-spacing: 0,
+  ),
+  5: (
+    weight: $font-weight-regular,
+    size: $font-size-13,
+    line-height: 1.6,
+    letter-spacing: 0,
+  ),
+);
