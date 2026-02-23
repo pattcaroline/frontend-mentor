@@ -1,0 +1,38 @@
+//Font family
+$font-barlow: "Barlow Semi Condensed", sans-serif;
+
+//Font weight
+$font-weight-semibold: 600;
+$font-weight-medium: 500;
+
+//Typography
+$text-presets: (
+  1: (
+    family: $font-barlow,
+    weight: $font-weight-semibold,
+    size: 20px,
+    line-height: 1.2,
+    letter-spacing: 0,
+  ),
+  2: (
+    family: $font-barlow,
+    weight: $font-weight-medium,
+    size: 13px,
+    line-height: 1.1,
+    letter-spacing: 0,
+  ),
+  3: (
+    family: $font-barlow,
+    weight: $font-weight-medium,
+    size: 13px,
+    line-height: 1.4,
+    letter-spacing: 0,
+  ),
+  4: (
+    family: $font-barlow,
+    weight: $font-weight-medium,
+    size: 11px,
+    line-height: 1.1,
+    letter-spacing: 0.5px,
+  ),
+);

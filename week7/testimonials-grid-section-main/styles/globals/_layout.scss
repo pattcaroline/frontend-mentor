@@ -1,0 +1,82 @@
+@use "mixins" as mixin;
+@use "typography" as typo;
+@use "variables" as var;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 73px 35px;
+  gap: 32px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  padding: 32px;
+  gap: 16px;
+  color: var.$grey-100;
+}
+
+.daniel {
+  background-color: var.$purple-500;
+  .profile {
+    outline-style: solid; //outline border style
+    outline-color: var.$purple-300;
+    outline-width: 2px;
+  }
+}
+
+.jonathan {
+  background-color: var.$grey-500;
+}
+
+.jeannette,
+.kira {
+  background-color: var.$white;
+  color: var.$grey-500;
+}
+
+.patrick {
+  background-color: var.$dark-blue;
+  .profile {
+    outline-style: solid; //outline border style
+    outline-color: var.$purple-500;
+    outline-width: 2px;
+  }
+}
+
+.photo-profile {
+  display: flex;
+  flex-direction: row;
+  gap: 17px;
+}
+
+.profile-name {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.profile {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
+
+// Typography
+.full-name {
+  @include mixin.text(2);
+}
+
+.verified {
+  @include mixin.text(4);
+}
+
+.quote-highlight {
+  @include mixin.text(1);
+}
+
+.quote-paragraph {
+  @include mixin.text(3);
+}

@@ -1,0 +1,106 @@
+html {
+  box-sizing: border-box;
+  background-color: hsl(214, 17%, 92%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 73px 35px;
+  gap: 32px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  padding: 32px;
+  gap: 16px;
+  color: hsl(214, 17%, 92%);
+}
+
+.daniel {
+  background-color: hsl(263, 55%, 52%);
+}
+.daniel .profile {
+  outline-style: solid;
+  outline-color: hsl(264, 82%, 80%);
+  outline-width: 2px;
+}
+
+.jonathan {
+  background-color: hsl(217, 19%, 35%);
+}
+
+.jeannette,
+.kira {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(217, 19%, 35%);
+}
+
+.patrick {
+  background-color: hsl(219, 29%, 14%);
+}
+.patrick .profile {
+  outline-style: solid;
+  outline-color: hsl(263, 55%, 52%);
+  outline-width: 2px;
+}
+
+.photo-profile {
+  display: flex;
+  flex-direction: row;
+  gap: 17px;
+}
+
+.profile-name {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.profile {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
+
+.full-name {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+.verified {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: 0.5px;
+}
+
+.quote-highlight {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+.quote-paragraph {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0;
+}/*# sourceMappingURL=styles.css.map */
