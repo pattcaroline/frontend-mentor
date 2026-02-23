@@ -2,6 +2,26 @@
 @use "typography" as typo;
 @use "variables" as var;
 
+// Typography
+.full-name {
+  @include mixin.text(2);
+}
+
+.verified {
+  @include mixin.text(4);
+}
+
+.quote-highlight {
+  @include mixin.text(1);
+  z-index: 1;
+}
+
+.quote-paragraph {
+  @include mixin.text(3);
+}
+
+// Layout Mobile first
+
 .container {
   display: flex;
   flex-direction: column;
@@ -20,6 +40,7 @@
 
 .daniel {
   background-color: var.$purple-500;
+  grid-area: daniel;
   .profile {
     outline-style: solid; //outline border style
     outline-color: var.$purple-300;
@@ -28,7 +49,16 @@
 }
 
 .jonathan {
+  grid-area: jonathan;
   background-color: var.$grey-500;
+}
+
+.jeannette {
+  grid-area: jeannette;
+}
+
+.kira {
+  grid-area: kira;
 }
 
 .jeannette,
@@ -39,6 +69,7 @@
 
 .patrick {
   background-color: var.$dark-blue;
+  grid-area: patrick;
   .profile {
     outline-style: solid; //outline border style
     outline-color: var.$purple-500;
@@ -56,6 +87,7 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
+  z-index: 1;
 }
 
 .profile {
@@ -64,19 +96,40 @@
   border-radius: 50%;
 }
 
-// Typography
-.full-name {
-  @include mixin.text(2);
+.big-quotation {
+  display: none; //hide big-quotation mark in mobile
 }
 
-.verified {
-  @include mixin.text(4);
+// Tablet
+@media (width >= 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "daniel daniel"
+      "jonathan jeannette"
+      "patrick patrick"
+      "kira kira";
+    position: relative;
+  }
+
+  .big-quotation {
+    position: absolute;
+    top: 0;
+    right: 164px;
+    width: 100px;
+    display: block;
+    opacity: 50%;
+  }
 }
 
-.quote-highlight {
-  @include mixin.text(1);
-}
-
-.quote-paragraph {
-  @include mixin.text(3);
+//Desktop
+@media (width >= 1440px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "daniel daniel jonathan kira"
+      "jeannette patrick patrick kira";
+  }
 }
