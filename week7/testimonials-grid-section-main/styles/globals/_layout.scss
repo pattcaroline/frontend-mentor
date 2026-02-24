@@ -41,6 +41,8 @@
 .daniel {
   background-color: var.$purple-500;
   grid-area: daniel;
+  position: relative;
+  overflow: hidden;
   .profile {
     outline-style: solid; //outline border style
     outline-color: var.$purple-300;
@@ -125,11 +127,26 @@
 
 //Desktop
 @media (width >= 1440px) {
+  body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .container {
+    margin: 0 auto;
+    max-width: 1114px;
+    position: relative;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas:
       "daniel daniel jonathan kira"
       "jeannette patrick patrick kira";
+  }
+
+  .big-quotation {
+    position: absolute;
+    right: 104px;
+    top: 0;
   }
 }
