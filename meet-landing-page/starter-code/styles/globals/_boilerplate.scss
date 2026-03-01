@@ -1,0 +1,14 @@
+@use "variables" as var;
+
+html {
+  box-sizing: border-box;
+  //background-color: var.$grey-100;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
