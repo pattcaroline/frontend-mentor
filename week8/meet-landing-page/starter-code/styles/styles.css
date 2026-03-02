@@ -8,4 +8,190 @@ html {
   box-sizing: inherit;
   margin: 0;
   padding: 0;
+}
+
+.section-title {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 40px;
+  line-height: 1.1;
+  letter-spacing: 0;
+  color: #28283d;
+  text-align: center;
+}
+
+.section-title-2 {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 32px;
+  line-height: 1.1;
+  letter-spacing: 0;
+  text-align: center;
+  font-weight: bold;
+}
+
+.section-para {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
+  line-height: 1.1;
+  letter-spacing: 0;
+  color: #87879d;
+  text-align: center;
+}
+
+.section-subtitle {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 12px;
+  line-height: 1.1;
+  letter-spacing: 4px;
+  color: #4d96a9;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.btn-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.download-btn {
+  background-color: #4d96a9;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: #fafafa;
+  font-weight: bold;
+  border: none;
+  width: 193px;
+  padding: 16px 40px;
+  border-radius: 29px;
+  gap: 4px;
+}
+
+.special-text-btn {
+  color: #8fe3f9;
+}
+
+.about-btn {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: #fafafa;
+  background-color: #855fb1;
+  padding: 16px 40px;
+  border-radius: 29px;
+  width: 161px;
+  border: none;
+  font-weight: bold;
+}
+
+.footer-title {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 32px;
+  line-height: 1.1;
+  letter-spacing: 0;
+  color: #fafafa;
+}
+
+.footer-para {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
+  line-height: 1.1;
+  letter-spacing: 0;
+  color: #fafafa;
+}
+
+.footer-download-btn {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: #fafafa;
+  background-color: #d9b8ff;
+}
+
+.footer-special-btn-text {
+  color: #d9b8ff;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 48px 80px 0 80px;
+}
+
+.hero {
+  padding: 64px 32px 32px 32px;
+}
+
+.combined-image {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 160px;
+  gap: 17px;
+}
+
+.text-content {
+  padding-top: 48px;
+  gap: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.number-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.vertical-line {
+  width: 1px;
+  height: 80px;
+  border: 0.5px solid #d1d1df;
+}
+
+.number-circle {
+  border: 1px solid #d1d1df;
+  border-radius: 50%;
+  color: #87879d;
+  padding: 18px;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  gap: 64px;
+}
+
+.grid-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(147px, 2fr));
+  gap: 16px;
+}
+
+img {
+  border-radius: 8px;
+  height: 100%;
+  width: 100%;
+}
+
+.text-content-2 {
+  padding: 0 0 64px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.gap-16 {
+  padding-top: 16px;
+}
+
+.gap-32 {
+  padding-top: 32px;
 }/*# sourceMappingURL=styles.css.map */
