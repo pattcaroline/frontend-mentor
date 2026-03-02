@@ -1,0 +1,47 @@
+// Font Family
+$font-red-hat: "Red Hat Display", sans-serif;
+
+// Font Weight
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+
+// Typography - Textpresets from Figma design
+
+//mobile font-size
+$text-presets: (
+  1: (
+    family: $font-red-hat,
+    weight: $font-weight-regular,
+    size: 40px,
+    line-height: 1.1,
+    letter-spacing: 0,
+  ),
+  2: (
+    family: $font-red-hat,
+    weight: $font-weight-regular,
+    size: 32px,
+    line-height: 1.1,
+    letter-spacing: 0,
+  ),
+  3: (
+    family: $font-red-hat,
+    weight: $font-weight-regular,
+    size: 12px,
+    line-height: 1.1,
+    letter-spacing: 4px,
+  ),
+  4: (
+    family: $font-red-hat,
+    weight: $font-weight-medium,
+    size: 16px,
+    line-height: 1.1,
+    letter-spacing: 0,
+  ),
+  5: (
+    family: $font-red-hat,
+    weight: $font-weight-regular,
+    size: 16px,
+    line-height: 1.5,
+    letter-spacing: 0,
+  ),
+);

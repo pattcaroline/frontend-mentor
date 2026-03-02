@@ -1,0 +1,99 @@
+@use "typography" as typo;
+@use "variables" as var;
+@use "sass:map";
+
+@mixin text($preset) {
+  $text: map.get(typo.$text-presets, $preset);
+  font-family: map.get($text, family);
+  font-weight: map.get($text, weigth);
+  font-size: map.get($text, size);
+  line-height: map.get($text, line-height);
+  letter-spacing: map.get($text, letter-spacing);
+}
+
+// Mobile first styling
+// Headings typography
+
+.section-title {
+  @include text(1);
+  color: var.$slate-900;
+  text-align: center;
+}
+
+.section-title-2 {
+  @include text(2);
+  text-align: center;
+  font-weight: bold;
+}
+
+.section-para {
+  @include text(4);
+  color: var.$slate-600;
+  text-align: center;
+}
+
+.section-subtitle {
+  @include text(3);
+  color: var.$cyan-600;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+// Button section typography
+
+.btn-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.download-btn {
+  background-color: var.$cyan-600;
+  @include text(5);
+  color: var.$white;
+  font-weight: bold;
+  border: none;
+  width: 193px;
+  padding: 16px 40px;
+  border-radius: 29px;
+  gap: 4px;
+}
+
+.special-text-btn {
+  color: var.$cyan-300;
+}
+
+.about-btn {
+  @include text(5);
+  color: var.$white;
+  background-color: var.$purple-600;
+  padding: 16px 40px;
+  border-radius: 29px;
+  width: 161px;
+  border: none;
+  font-weight: bold;
+}
+
+// Footer
+
+.footer-title {
+  @include text(2);
+  color: var.$white;
+}
+
+.footer-para {
+  @include text(4);
+  color: var.$white;
+}
+
+.footer-download-btn {
+  @include text(5);
+  color: var.$white;
+  background-color: var.$purple-300;
+}
+
+.footer-special-btn-text {
+  color: var.$purple-300;
+}
