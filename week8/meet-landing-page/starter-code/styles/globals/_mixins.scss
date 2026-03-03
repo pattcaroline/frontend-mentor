@@ -58,6 +58,7 @@
   width: 193px;
   padding: 16px 40px;
   border-radius: 29px;
+  display: flex;
   gap: 4px;
 }
 
@@ -91,7 +92,14 @@
 .footer-download-btn {
   @include text(5);
   color: var.$white;
-  background-color: var.$purple-300;
+  background-color: var.$purple-600;
+  font-weight: bold;
+  border: none;
+  width: 193px;
+  padding: 16px 40px;
+  border-radius: 29px;
+  display: flex;
+  gap: 8px;
 }
 
 .footer-special-btn-text {
