@@ -14,25 +14,25 @@
 // Mobile first styling
 // Headings typography
 
-.section-title {
+.hero__title {
   @include text(1);
   color: var.$slate-900;
   text-align: center;
 }
 
-.section-title-2 {
+.features__title {
   @include text(2);
   text-align: center;
   font-weight: bold;
 }
 
-.section-para {
+.section__description {
   @include text(4);
   color: var.$slate-600;
   text-align: center;
 }
 
-.section-subtitle {
+.section__subtitle {
   @include text(3);
   color: var.$cyan-600;
   text-align: center;
@@ -42,14 +42,14 @@
 
 // Button section typography
 
-.btn-content {
+.btn {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
 }
 
-.download-btn {
+.btn--primary {
   background-color: var.$cyan-600;
   @include text(5);
   color: var.$white;
@@ -62,11 +62,11 @@
   gap: 4px;
 }
 
-.special-text-btn {
+.btn__version {
   color: var.$cyan-300;
 }
 
-.about-btn {
+.btn--secondary {
   @include text(5);
   color: var.$white;
   background-color: var.$purple-600;
@@ -77,19 +77,19 @@
   font-weight: bold;
 }
 
-// Footer
+// CTA Footer
 
-.footer-title {
+.cta__title {
   @include text(2);
   color: var.$white;
 }
 
-.footer-para {
+.cta__description {
   @include text(4);
   color: var.$white;
 }
 
-.footer-download-btn {
+.btn-terciary {
   @include text(5);
   color: var.$white;
   background-color: var.$purple-600;
@@ -102,6 +102,6 @@
   gap: 8px;
 }
 
-.footer-special-btn-text {
+.cta-btn__version {
   color: var.$purple-300;
 }

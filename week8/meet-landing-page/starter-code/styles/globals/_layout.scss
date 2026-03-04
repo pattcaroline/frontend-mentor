@@ -1,6 +1,6 @@
 @use "variables" as var;
 
-.logo {
+.header {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,7 +12,7 @@
   padding: 64px 32px 32px 32px;
 }
 
-.combined-image {
+.hero__images {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -20,7 +20,7 @@
   gap: 17px;
 }
 
-.text-content {
+.hero__content {
   padding-top: 48px;
   gap: 24px;
   display: flex;
@@ -30,19 +30,19 @@
 // Main section
 
 // Number line
-.number-content {
+.section-marker {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.vertical-line {
+.section-marker__line {
   width: 1px;
   height: 80px;
   border: 0.5px solid var.$slate-300;
 }
 
-.number-circle {
+.section-marker__number {
   border: 1px solid var.$slate-300;
   border-radius: 50%;
   color: var.$slate-600;
@@ -59,7 +59,7 @@
 
 // GRID IMAGES LAYOUT
 
-.grid-images {
+.features__gallerys {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(147px, 2fr));
   gap: 16px;
@@ -72,7 +72,7 @@ img {
 }
 
 // Second main text content
-.text-content-2 {
+.features__content {
   padding: 0 0 64px 0;
   display: flex;
   flex-direction: column;
@@ -88,11 +88,11 @@ img {
 
 // Footer layout
 
-.hero-footer {
+.cta {
   margin-top: -28px;
 }
 
-.content-footer {
+.cta__content {
   background-image:
     linear-gradient(rgba(77, 151, 169, 0.8), rgba(77, 151, 169, 0.8)),
     url("../assets/mobile/image-footer.jpg");
@@ -104,9 +104,4 @@ img {
   align-items: center;
   gap: 24px;
   padding: 64px 32px 32px 32px;
-}
-
-.footer-title,
-.footer-para {
-  text-align: center;
 }
