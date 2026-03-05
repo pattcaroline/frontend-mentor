@@ -40,43 +40,6 @@
   font-weight: bold;
 }
 
-// Button section typography
-
-.btn {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-}
-
-.btn--primary {
-  background-color: var.$cyan-600;
-  @include text(5);
-  color: var.$white;
-  font-weight: bold;
-  border: none;
-  width: 193px;
-  padding: 16px 40px;
-  border-radius: 29px;
-  display: flex;
-  gap: 4px;
-}
-
-.btn__version {
-  color: var.$cyan-300;
-}
-
-.btn--secondary {
-  @include text(5);
-  color: var.$white;
-  background-color: var.$purple-600;
-  padding: 16px 40px;
-  border-radius: 29px;
-  width: 161px;
-  border: none;
-  font-weight: bold;
-}
-
 // CTA Footer
 
 .cta__title {

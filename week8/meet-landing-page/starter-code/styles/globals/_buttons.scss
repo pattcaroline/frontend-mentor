@@ -1,0 +1,41 @@
+@use "variables" as var;
+@use "mixins" as mixin;
+
+// Button section typography
+
+.hero__actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.btn {
+  @include mixin.text(5);
+
+  border: none;
+  border-radius: 29px;
+  color: var.$white;
+  padding: 16px 40px;
+
+  &--primary {
+    background-color: var.$cyan-600;
+  }
+
+  &--secondary {
+    background-color: var.$purple-600;
+  }
+
+  &--terciary {
+    background-color: var.$purple-600;
+  }
+
+  &__version {
+    color: var.$cyan-300;
+  }
+
+  &__footerVersion {
+    color: var.$purple-300;
+  }
+}
