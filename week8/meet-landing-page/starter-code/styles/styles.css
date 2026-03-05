@@ -48,47 +48,6 @@ html {
   font-weight: bold;
 }
 
-.btn {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-}
-
-.btn--primary {
-  background-color: #4d96a9;
-  font-family: "Red Hat Display", sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0;
-  color: #fafafa;
-  font-weight: bold;
-  border: none;
-  width: 193px;
-  padding: 16px 40px;
-  border-radius: 29px;
-  display: flex;
-  gap: 4px;
-}
-
-.btn__version {
-  color: #8fe3f9;
-}
-
-.btn--secondary {
-  font-family: "Red Hat Display", sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0;
-  color: #fafafa;
-  background-color: #855fb1;
-  padding: 16px 40px;
-  border-radius: 29px;
-  width: 161px;
-  border: none;
-  font-weight: bold;
-}
-
 .cta__title {
   font-family: "Red Hat Display", sans-serif;
   font-size: 32px;
@@ -219,4 +178,38 @@ img {
   align-items: center;
   gap: 24px;
   padding: 64px 32px 32px 32px;
+}
+
+.hero__actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.btn {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0;
+  border: none;
+  border-radius: 29px;
+  color: #fafafa;
+  padding: 16px 40px;
+}
+.btn--primary {
+  background-color: #4d96a9;
+}
+.btn--secondary {
+  background-color: #855fb1;
+}
+.btn--terciary {
+  background-color: #855fb1;
+}
+.btn__version {
+  color: #8fe3f9;
+}
+.btn__footerVersion {
+  color: #d9b8ff;
 }/*# sourceMappingURL=styles.css.map */
