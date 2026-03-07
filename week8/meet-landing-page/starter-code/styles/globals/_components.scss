@@ -1,0 +1,49 @@
+@use "typography" as typo;
+@use "variables" as var;
+
+// Mobile first styling
+// Headings typography
+
+.hero__title {
+  @include typo.text-preset-1;
+  color: var.$slate-900;
+  text-align: center;
+}
+
+.features__title {
+  @include typo.text-preset-2;
+  text-align: center;
+}
+
+.section__description,
+.hero__description {
+  @include typo.text-preset-4;
+  color: var.$slate-600;
+  text-align: center;
+}
+
+.section__subtitle {
+  @include typo.text-preset-3;
+  color: var.$cyan-600;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.section__title {
+  @include typo.text-preset-2;
+  color: var.$slate-900;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+// CTA Footer
+
+.cta__title {
+  @include typo.text-preset-2;
+  color: var.$white;
+}
+
+.cta__description {
+  @include typo.text-preset-4;
+  color: var.$white;
+}

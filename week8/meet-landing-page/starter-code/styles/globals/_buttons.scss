@@ -1,5 +1,5 @@
 @use "variables" as var;
-@use "mixins" as mixin;
+@use "typography" as typo;
 
 // Button section typography
 
@@ -9,15 +9,28 @@
   justify-content: center;
   align-items: center;
   gap: 16px;
+
+  @include typo.tablet {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 .btn {
-  @include mixin.text(5);
+  @include typo.text-preset-5;
 
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
   border: none;
   border-radius: 29px;
   color: var.$white;
   padding: 16px 40px;
+  cursor: pointer;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
 
   &--primary {
     background-color: var.$cyan-600;
@@ -27,15 +40,15 @@
     background-color: var.$purple-600;
   }
 
-  &--terciary {
+  &--footer {
     background-color: var.$purple-600;
+
+    .btn__version {
+      color: var.$purple-300;
+    }
   }
 
   &__version {
     color: var.$cyan-300;
-  }
-
-  &__footerVersion {
-    color: var.$purple-300;
   }
 }

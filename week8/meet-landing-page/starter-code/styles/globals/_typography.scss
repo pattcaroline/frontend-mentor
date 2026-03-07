@@ -1,47 +1,94 @@
-// Font Family
-$font-red-hat: "Red Hat Display", sans-serif;
-
-// Font Weight
-$font-weight-regular: 400;
-$font-weight-medium: 500;
-
 // Typography - Textpresets from Figma design
 
-//mobile font-size
-$text-presets: (
-  1: (
-    family: $font-red-hat,
-    weight: $font-weight-regular,
-    size: 40px,
-    line-height: 1.1,
-    letter-spacing: 0,
-  ),
-  2: (
-    family: $font-red-hat,
-    weight: $font-weight-regular,
-    size: 32px,
-    line-height: 1.1,
-    letter-spacing: 0,
-  ),
-  3: (
-    family: $font-red-hat,
-    weight: $font-weight-regular,
-    size: 12px,
-    line-height: 1.1,
-    letter-spacing: 4px,
-  ),
-  4: (
-    family: $font-red-hat,
-    weight: $font-weight-medium,
-    size: 16px,
-    line-height: 1.1,
-    letter-spacing: 0,
-  ),
-  5: (
-    family: $font-red-hat,
-    weight: $font-weight-regular,
-    size: 16px,
-    line-height: 1.5,
-    letter-spacing: 0,
-  ),
-);
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+
+@mixin tablet {
+  @media (min-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $breakpoint-desktop) {
+    @content;
+  }
+}
+
+@mixin text-preset-1 {
+  font-weight: 900;
+  letter-spacing: 0;
+
+  //Mobile 40/110
+  font-size: 2.4rem;
+  line-height: 110%;
+
+  @include tablet {
+    font-size: 3rem; //48/110
+  }
+
+  @include desktop {
+    font-size: 4rem; // 64/110
+  }
+}
+
+@mixin text-preset-2 {
+  font-weight: 900;
+  letter-spacing: 0;
+
+  //Mobile 32/110
+  font-size: 2rem;
+  line-height: 110%;
+
+  @include tablet {
+    font-size: 2.25rem; // 36/110
+  }
+
+  @include desktop {
+    font-size: 2.5rem; // 40/110
+  }
+}
+
+@mixin text-preset-3 {
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+
+  //Mobile 12/110
+  font-size: 0.75rem;
+  line-height: 110%;
+
+  @include tablet {
+    font-size: 0.875rem; // 14/110
+  }
+
+  @include desktop {
+    font-size: 1rem; // 16/110
+  }
+}
+
+@mixin text-preset-4 {
+  font-weight: 500;
+  letter-spacing: 0;
+
+  //Mobile not listed -> using tablet as base
+  font-size: 1rem;
+  line-height: 150%;
+
+  @include tablet {
+    font-size: 1rem; // 16/150
+  }
+
+  @include desktop {
+    font-size: 1.125rem; // 18/150
+  }
+}
+
+@mixin text-preset-5 {
+  font-weight: 900;
+  letter-spacing: 0;
+
+  //Mobile not listed -> using desktop values
+  font-size: 1rem;
+  line-height: 150%;
+}

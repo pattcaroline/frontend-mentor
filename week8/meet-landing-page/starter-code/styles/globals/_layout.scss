@@ -1,15 +1,28 @@
 @use "variables" as var;
+@use "typography" as t;
 
 .header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 48px 80px 0 80px;
+  padding: 4rem 5rem 0 5rem;
+
+  @include t.desktop {
+    padding: 5rem 5rem 0 5rem;
+  }
 }
 
 .hero {
-  padding: 64px 32px 32px 32px;
+  padding: 4rem 2rem 2rem 2rem;
+  overflow: hidden;
+
+  @include t.desktop {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    padding: 4rem 5rem;
+  }
 }
 
 .hero__images {
@@ -18,13 +31,52 @@
   justify-content: center;
   height: 160px;
   gap: 17px;
+
+  img {
+    height: 100%;
+    width: auto;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+
+  @include t.tablet {
+    background-repeat: no-repeat;
+    height: 303px;
+    gap: 32px;
+  }
+
+  @include t.desktop {
+    display: contents;
+    height: 360px;
+
+    img {
+      &:first-child {
+        grid-column: 1;
+        justify-self: start;
+      }
+
+      &:last-child {
+        grid-column: 3;
+        order: 1;
+        justify-self: end;
+      }
+    }
+  }
 }
 
 .hero__content {
-  padding-top: 48px;
-  gap: 24px;
+  padding-top: 3rem;
+  gap: 1.5rem;
   display: flex;
   flex-direction: column;
+
+  @include t.tablet {
+    padding: 72px;
+  }
+
+  @include t.desktop {
+    padding: 0 32px;
+  }
 }
 
 // Main section
@@ -53,43 +105,41 @@
 .main-content {
   display: flex;
   flex-direction: column;
-  padding: 32px;
-  gap: 64px;
+  padding: 2rem;
+  gap: 4rem;
 }
 
 // GRID IMAGES LAYOUT
 
-.features__gallerys {
+.features__gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(147px, 2fr));
-  gap: 16px;
-}
+  gap: 1rem;
 
-img {
-  border-radius: 8px;
-  height: 100%;
-  width: 100%;
+  img {
+    border-radius: 8px;
+    height: 100%;
+    width: 100%;
+  }
 }
 
 // Second main text content
+.features {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 2rem 4rem 2rem;
+  gap: 4rem;
+}
+
 .features__content {
-  padding: 0 0 64px 0;
   display: flex;
   flex-direction: column;
 }
 
-.gap-16 {
-  padding-top: 16px;
-}
-
-.gap-32 {
-  padding-top: 32px;
-}
-
 // Footer layout
 
-.cta {
-  margin-top: -28px;
+.section-marker {
+  margin-bottom: -1.75rem;
 }
 
 .cta__content {
@@ -103,5 +153,5 @@ img {
   justify-content: center;
   align-items: center;
   gap: 24px;
-  padding: 64px 32px 32px 32px;
+  padding: 4rem 2rem 2rem 2rem;
 }
