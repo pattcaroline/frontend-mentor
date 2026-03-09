@@ -185,9 +185,9 @@ body {
 @media (min-width: 1024px) {
   .hero {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) 2fr minmax(0, 1fr);
     align-items: center;
-    padding: 4rem 5rem;
+    padding: 4rem 0;
   }
 }
 
