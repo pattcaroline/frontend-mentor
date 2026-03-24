@@ -1,7 +1,11 @@
-const shareButton = document.querySelector(".share-btn");
-const shareButtonActive = document.querySelector(".share-active");
+const cardFooter = document.querySelector(".card-footer");
+const shareOverlay = document.querySelector(".share-overlay");
+const shareBtn = document.querySelector(".share-btn");
+const shareBtnActive = document.querySelector(".share-btn-active");
 
-shareButton.addEventListener("click", () => {
-  shareButton.parentElement.classList.toggle("hidden");
-  shareButtonActive.classList.toggle("hidden");
-});
+function toggleShareBtn() {
+  shareOverlay.classList.toggle("visible");
+}
+
+shareBtn.addEventListener("click", toggleShareBtn);
+shareBtnActive.addEventListener("click", toggleShareBtn);

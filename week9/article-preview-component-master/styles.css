@@ -32,15 +32,14 @@ body {
 .container {
   background-color: var(--white);
   width: 327px;
-  /* height: 538px; */
   border-radius: 10px;
   overflow: hidden;
+  position: relative;
 }
 
-/* BITMAP Image */
+/* Card Image */
 
-.bitmap {
-  background-image: url(images/drawers.jpg);
+.card-image {
   height: 200px;
   width: 100%;
   background-repeat: no-repeat;
@@ -53,18 +52,14 @@ body {
 .content {
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   padding: 32px;
 }
 
 /* TEXT CONTENT */
 
-.text-block {
-  margin-bottom: 48px;
-}
-
-.text-block h1 {
+.text-block h2 {
   font-weight: var(--bold);
   font-size: 20px;
   line-height: 1.3;
@@ -76,17 +71,17 @@ body {
   font-weight: var(--medium);
   font-size: 13px;
   line-height: 1.4;
-  margin-bottom: 0.12%;
   color: var(--grey-500);
 }
 
 /* BUTTON GROUP & SHARE BUTTON */
-.button-group {
+.card-footer {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 64px;
+  margin-top: 48px;
 }
 
 .profile {
@@ -115,7 +110,7 @@ body {
   font-weight: var(--bold);
   font-size: 13px;
   line-height: 1.4;
-  margin-bottom: 0.12%;
+  /* margin-bottom: 0.12%; */
   color: var(--grey-900);
 }
 
@@ -123,7 +118,7 @@ body {
   font-weight: var(--medium);
   font-size: 13px;
   line-height: 1.4;
-  margin-bottom: 0.12%;
+  /* margin-bottom: 0.12%; */
   color: var(--grey-400);
 }
 
@@ -135,13 +130,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  border: none;
 }
 
 .share-btn i {
   color: var(--grey-500);
 }
 
-.share-active {
+.share-overlay {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -149,50 +145,59 @@ body {
   gap: 64px;
   background-color: var(--grey-900);
   height: 76px;
-  margin-top: -50px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
 }
 
-.brands-icon-grouped {
+.share-actions {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   gap: 24px;
 }
 
-.brands-icon {
+.social-icon {
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 16px;
 }
 
-.share-active p {
+.share-overlay p {
   color: var(--grey-400);
   font-size: 13px;
   line-height: 1.4;
-  letter-spacing: 25%;
+  letter-spacing: 0.25rem;
   text-transform: uppercase;
 }
 
-.share-active i {
+.share-overlay i {
   font-size: 20px;
   color: var(--white);
 }
 
 .share-btn-active {
   background-color: var(--grey-200);
+  border: none;
   height: 32px;
   width: 32px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-
-  i {
-    color: var(--grey-500);
-  }
 }
 
-.hidden {
-  display: none;
+.share-btn-active i {
+  color: var(--grey-500);
+}
+
+.share-overlay.visible {
+  opacity: 1;
+  pointer-events: auto;
 }
