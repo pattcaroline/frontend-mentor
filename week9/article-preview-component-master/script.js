@@ -1,11 +1,28 @@
-const cardFooter = document.querySelector(".card-footer");
-const shareOverlay = document.querySelector(".share-overlay");
-const shareBtn = document.querySelector(".share-btn");
-const shareBtnActive = document.querySelector(".share-btn-active");
+const btn = document.getElementById("shareBtn");
+const tooltip = document.getElementById("tooltip");
+const footer = document.getElementById("footer");
+let open = false;
 
-function toggleShareBtn() {
-  shareOverlay.classList.toggle("visible");
+function toggle() {
+  open = !open;
+  btn.classList.toggle("active", open);
+  btn.setAttribute("aria-expanded", open);
+  tooltip.classList.toggle("visible", open);
+  tooltip.setAttribute("aria-hidden", !open);
+  footer.classList.toggle("sharing", open);
 }
 
-shareBtn.addEventListener("click", toggleShareBtn);
-shareBtnActive.addEventListener("click", toggleShareBtn);
+btn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  toggle();
+});
+
+document.addEventListener("click", (e) => {
+  if (open && !tooltip.contains(e.target) && e.target !== btn) {
+    toggle();
+  }
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && open) toggle();
+});
