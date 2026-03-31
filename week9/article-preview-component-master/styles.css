@@ -181,8 +181,10 @@ body {
 
 .share-tooltip {
   position: absolute;
+  max-width: 240px;
   bottom: calc(100% + 16px);
-  right: calc(-24%);
+  left: 50%;
+  transform: translateX(16%);
   background-color: var(--grey-900);
   border-radius: 10px;
   padding: 18px 38px;
@@ -214,7 +216,6 @@ body {
 .share-tooltip.visible {
   opacity: 1;
   pointer-events: all;
-  transform: translateY(10%);
 }
 
 .share-tooltip__label {
