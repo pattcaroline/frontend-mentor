@@ -3,6 +3,13 @@ const tooltip = document.getElementById("tooltip");
 const footer = document.getElementById("footer");
 let open = false;
 
+//Validate all required elements exist
+if (!btn || !tooltip || !footer) {
+  console.error(
+    `Error: one or more elements not found: ${(btn, tooltip, footer)}`,
+  );
+}
+
 function toggle() {
   open = !open;
   btn.classList.toggle("active", open);

@@ -8,9 +8,9 @@
   /* COLORS */
   --white: hsl(0, 0%, 100%);
   --grey-900: hsl(217, 19%, 35%);
-  --grey-500: #6d7f97;
+  --grey-500: hsl(214, 17%, 51%);
   --grey-400: hsl(212, 23%, 69%);
-  --grey-200: #ecf2f8;
+  --grey-200: hsl(210, 46%, 95%);
 }
 
 *,
@@ -66,7 +66,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   padding: 32px;
-  gap: 24px;
+  gap: 48px;
   flex: 1;
 }
 
@@ -119,6 +119,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2px;
+  font-style: normal;
 }
 
 .card__author-name {
@@ -181,8 +182,7 @@ body {
 .share-tooltip {
   position: absolute;
   bottom: calc(100% + 16px);
-  right: 0;
-  transform: translateX(50%) translateY(8px);
+  right: calc(-28%);
   background-color: var(--grey-900);
   border-radius: 10px;
   padding: 18px 38px;
@@ -192,7 +192,6 @@ body {
   white-space: nowrap;
   opacity: 0;
   pointer-events: none;
-  transform: translateY(50px);
   transition:
     opacity 0.3s ease,
     transform 0.3s ease;
@@ -215,13 +214,14 @@ body {
 .share-tooltip.visible {
   opacity: 1;
   pointer-events: all;
-  transform: translateX(50%) translateY(0);
+  transform: translateY(10%);
 }
 
 .share-tooltip__label {
   font-size: 13px;
-  font-weight: var(--bold);
+  font-weight: var(--medium);
   line-height: 1.4;
+  letter-spacing: 0.25rem;
   text-transform: uppercase;
   color: var(--grey-400);
 }
@@ -267,7 +267,6 @@ body {
   }
 
   .card__body {
-    padding: 24px;
     overflow: visible;
   }
 
@@ -291,7 +290,9 @@ body {
     border-radius: 0 0 10px 10px;
     justify-content: flex-start;
     padding: 32px;
+    margin-bottom: 16px;
     width: 100%;
+    gap: 24px;
   }
 
   .share-tooltip::after {
