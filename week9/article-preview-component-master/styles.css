@@ -90,7 +90,7 @@ body {
 .card__footer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 160px;
   position: relative;
 }
 
@@ -182,7 +182,7 @@ body {
 .share-tooltip {
   position: absolute;
   bottom: calc(100% + 16px);
-  right: calc(-28%);
+  right: calc(-24%);
   background-color: var(--grey-900);
   border-radius: 10px;
   padding: 18px 38px;
@@ -272,6 +272,9 @@ body {
   }
 
   .card__footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 64px;
     position: static;
   }
 
