@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./images/Screenshot.png)
+![](./images/screeshot-article.png)
 
 ### Links
 
@@ -40,7 +40,7 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- Desktop-firt workflow
+- Desktop-first workflow
 
 ### What I learned
 
@@ -51,8 +51,6 @@ I learned how to position a tooltip on top of a button using calc() and position
 I'm going to improve my usage of px to rem. I need to apply better the calc() in CSS. Also, I need to imrpove my Javascript logic. I'll improve my time effeciecy coding the projects and also the time I spend analizing the figma designs.
 
 ### AI Collaboration
-
-Describe how you used AI tools (if any) during this project. This helps demonstrate your ability to work effectively with AI assistants.
 
 - I have used Claude to help me debug the tooltip positioning on top of the share button
 
