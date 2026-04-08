@@ -41,6 +41,14 @@ body {
   justify-content: center;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
 .main-container {
   display: flex;
   flex-direction: column;
@@ -113,8 +121,8 @@ body {
 
 .form-field__label {
   position: absolute;
-  width: 1;
-  height: 1;
+  width: 1rem;
+  height: 1rem;
   overflow: hidden;
   white-space: nowrap;
 }
@@ -139,11 +147,13 @@ body {
 
 .form-field__error {
   display: none;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .form-field--error .form-field__error {
   display: block;
-  text-align: rigth;
+  text-align: right;
   color: var(--primary-red-400);
   font-size: 11px;
   line-height: 1.55;
@@ -158,6 +168,10 @@ body {
   background-repeat: no-repeat;
   background-position: right 1rem center;
   padding: 1rem 2rem;
+}
+
+.form-field--success .form-field__input {
+  border-color: var(--primary-green-400);
 }
 
 /* FORM SUBMIT BUTTON SECTION */
@@ -202,7 +216,7 @@ body {
   color: var(--primary-red-400);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   body {
     margin: 3rem 4rem;
     background-image: url(./images/bg-intro-desktop.png);
@@ -255,6 +269,11 @@ body {
   body {
     flex-direction: row;
     gap: 48px;
+  }
+
+  .container {
+    flex-direction: row;
+    margin: 2rem auto;
   }
 
   .main-container__title {

@@ -37,7 +37,8 @@ function validadeField(field) {
     wrapper.classList.add("form-field--error");
     errorSpan.textContent = field.message;
   } else {
-    wrapper.classList.add("form-field-error");
+    wrapper.classList.remove("form-field--error");
+    wrapper.classList.add("form-field--success");
     errorSpan.textContent = "";
   }
 
@@ -48,11 +49,12 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
   const allValid = fields.map(validadeField).every(Boolean);
   if (allValid) {
-    form.submit;
+    alert("Submitted!");
+    form.submit();
   }
 });
 
 fields.forEach((field) => {
   const input = document.getElementById(field.id);
-  input.addEventListener("input", () => validadeField(fields));
+  input.addEventListener("input", () => validadeField(field));
 });
