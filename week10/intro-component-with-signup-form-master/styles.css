@@ -35,7 +35,8 @@ body {
   background-color: var(--primary-red-400);
   background-blend-mode: multiply;
   color: var(--white);
-  margin: 4rem 2rem;
+  min-height: 100vh;
+  padding: 4rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -240,7 +241,7 @@ body {
 /********************************* MEDIA QUERIES *******************/
 @media (min-width: 48rem) {
   body {
-    margin: 3rem 4rem;
+    padding: 3rem 4rem;
     background-image: url(./images/bg-intro-desktop.png);
   }
 
