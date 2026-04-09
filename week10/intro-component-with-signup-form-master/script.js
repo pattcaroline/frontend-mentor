@@ -5,41 +5,58 @@ const fields = [
     id: "first-name",
     errorId: "first-name-error",
     message: "First Name cannot be empty",
-    validade: (value) => value.trim() !== "",
+    placeholder: "First Name",
+    validate: (value) => value.trim() !== "",
   },
   {
     id: "last-name",
     errorId: "last-name-error",
     message: "Last Name cannot be empty",
-    validade: (value) => value.trim() !== "",
+    placeholder: "Last Name",
+    validate: (value) => value.trim() !== "",
   },
   {
     id: "email",
     errorId: "email-error",
     message: "Looks like this is not an email",
-    validade: (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value),
+    placeholder: "Email Address",
+    errorPlaceholder: "email@example.com",
+    validate: (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value),
   },
   {
     id: "password",
     errorId: "password-error",
     message: "Password cannot be empty",
-    validade: (value) => value.trim() !== "",
+    placeholder: "Password",
+    validate: (value) => value.trim() !== "",
   },
 ];
 
-function validadeField(field) {
+function validateField(field) {
   const input = document.getElementById(field.id);
   const errorSpan = document.getElementById(field.errorId);
   const wrapper = input.closest(".form-field");
-  const isValid = field.validade(input.value);
+  const isValid = field.validate(input.value);
 
   if (!isValid) {
     wrapper.classList.add("form-field--error");
+    wrapper.classList.remove("form-field--success");
     errorSpan.textContent = field.message;
+    input.setAttribute("aria-invalid", "true");
+    if (field.errorPlaceholder) {
+      input.placeholder = field.errorPlaceholder;
+    }
   } else {
     wrapper.classList.remove("form-field--error");
-    wrapper.classList.add("form-field--success");
+    //Only add success if the field has a value
+    if (input.value.trim() !== "") {
+      wrapper.classList.add("form-field--success");
+    } else {
+      wrapper.classList.remove("form-field--success");
+    }
     errorSpan.textContent = "";
+    input.setAttribute("aria-invalid", "false");
+    input.placeholder = field.placeholder;
   }
 
   return isValid;
@@ -47,7 +64,7 @@ function validadeField(field) {
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  const allValid = fields.map(validadeField).every(Boolean);
+  const allValid = fields.map(validateField).every(Boolean);
   if (allValid) {
     alert("Submitted!");
     form.submit();
@@ -56,5 +73,5 @@ form.addEventListener("submit", (e) => {
 
 fields.forEach((field) => {
   const input = document.getElementById(field.id);
-  input.addEventListener("input", () => validadeField(field));
+  input.addEventListener("input", () => validateField(field));
 });

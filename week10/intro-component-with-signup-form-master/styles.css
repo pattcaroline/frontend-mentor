@@ -6,6 +6,7 @@
   --medium: 500;
   --regular: 400;
 
+  --white: hsl(0, 0%, 100%);
   --primary-red-400: hsl(0, 100%, 74%);
 
   --primary-green-400: rgb(56, 204, 140);
@@ -33,7 +34,7 @@ body {
   background-size: cover;
   background-color: var(--primary-red-400);
   background-blend-mode: multiply;
-  color: #fff;
+  color: var(--white);
   margin: 4rem 2rem;
   display: flex;
   flex-direction: column;
@@ -72,7 +73,7 @@ body {
   margin-bottom: 4rem;
 }
 
-/* FORM CONTAINER */
+/***************************** FORM CONTAINER *****************/
 
 .form-container {
   display: flex;
@@ -95,18 +96,30 @@ body {
   box-shadow: 0 8px 0 0 rgba(0, 0, 0, 0.1469);
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .form-container__banner span {
   font-weight: var(--bold);
 }
 
-/* FORM STYLING  */
+/*********************** FORM STYLING  **********************/
 
 .form-fields {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
+  background-color: var(--white);
   padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 8px 0 0 rgba(0, 0, 0, 0.1469);
@@ -121,8 +134,8 @@ body {
 
 .form-field__label {
   position: absolute;
-  width: 1rem;
-  height: 1rem;
+  width: 1px;
+  height: 1px;
   overflow: hidden;
   white-space: nowrap;
 }
@@ -136,6 +149,7 @@ body {
   line-height: 1.75;
   font-weight: var(--regular);
   color: var(--neutral-gray-900);
+  max-height: 3.5rem;
   padding: 1rem 1.5rem;
   width: 100%;
 }
@@ -145,6 +159,7 @@ body {
   border-color: var(--accent-purple-700);
 }
 
+/************************* FORM ERROR STYLING ********************/
 .form-field__error {
   display: none;
   display: flex;
@@ -159,7 +174,7 @@ body {
   line-height: 1.55;
   font-style: italic;
   font-weight: var(--medium);
-  margin-bottom: 8px;
+  margin-top: 8px;
 }
 
 .form-field--error .form-field__input {
@@ -174,7 +189,7 @@ body {
   border-color: var(--primary-green-400);
 }
 
-/* FORM SUBMIT BUTTON SECTION */
+/************************ FORM SUBMIT BUTTON SECTION ***************/
 
 .form-submit {
   display: flex;
@@ -189,13 +204,19 @@ body {
   font-weight: var(--bold);
   letter-spacing: 2px;
   white-space: nowrap;
-  color: #fff;
+  color: var(--white);
   text-transform: uppercase;
   box-shadow: inset 0 -4px 0 0 rgba(0, 0, 0, 0.0909);
   border: none;
   border-radius: 5px;
   padding: 1rem 2rem;
   width: 100%;
+  cursor: pointer;
+}
+
+.form-submit__button:hover,
+.form-submit__button:active {
+  background-color: var(--primary-green-300);
 }
 
 .form-submit__terms {
@@ -216,6 +237,7 @@ body {
   color: var(--primary-red-400);
 }
 
+/********************************* MEDIA QUERIES *******************/
 @media (min-width: 48rem) {
   body {
     margin: 3rem 4rem;
@@ -223,11 +245,11 @@ body {
   }
 
   .main-container {
-    max-width: 540px;
+    max-width: 33.75rem;
   }
 
   .main-container__title {
-    font-size: 50px;
+    font-size: 3.125rem;
     line-height: 1.1;
     letter-spacing: 0.5px;
   }
@@ -238,13 +260,13 @@ body {
   }
 
   .form-container {
-    width: 540px;
+    width: 33.75rem;
   }
 
   .form-container__banner {
-    max-width: 540px;
+    max-width: 33.75rem;
     flex-direction: row;
-    min-height: 60px;
+    min-height: 3.75rem;
   }
 
   .form-fields {
@@ -257,7 +279,7 @@ body {
   }
 
   .form-submit {
-    min-height: 56px;
+    min-height: 3.5rem;
     width: 100%;
   }
   .form-submit__terms {
@@ -265,10 +287,10 @@ body {
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 90rem) {
   body {
     flex-direction: row;
-    gap: 48px;
+    gap: 3rem;
   }
 
   .container {
