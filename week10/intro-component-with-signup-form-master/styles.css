@@ -35,12 +35,11 @@ body {
   background-color: var(--primary-red-400);
   background-blend-mode: multiply;
   color: var(--white);
-  min-height: 100vh;
   padding: 4rem 2rem;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
 }
 
 .container {
@@ -49,6 +48,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
+  min-height: 100vh;
 }
 
 .main-container {
@@ -290,13 +290,13 @@ body {
 
 @media (min-width: 90rem) {
   body {
-    flex-direction: row;
+    /* flex-direction: row; */
     gap: 3rem;
   }
 
   .container {
     flex-direction: row;
-    margin: 2rem auto;
+    /* margin: 2rem auto; */
   }
 
   .main-container__title {
@@ -305,5 +305,6 @@ body {
 
   .main-container__paragraph {
     text-align: left;
+    margin-bottom: 0;
   }
 }
