@@ -162,7 +162,6 @@ body {
 
 /************************* FORM ERROR STYLING ********************/
 .form-field__error {
-  display: none;
   display: flex;
   justify-content: flex-end;
 }
@@ -227,7 +226,7 @@ body {
   justify-content: center;
   font-size: 11px;
   line-height: 1.9;
-  white-space: nowrap;
+  white-space: normal;
   font-weight: var(--medium);
   color: var(--neutral-purple-350);
 }

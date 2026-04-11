@@ -17,15 +17,15 @@
   </head>
   <body>
     <main class="container">
-      <div class="main-container">
+      <section class="main-container">
         <h1 class="main-container__title">Learn to code by watching others</h1>
         <p class="main-container__paragraph">
           See how experienced developers solve problems in real-time. Watching
           scripted tutorials is great, but understanding how developers think is
           invaluable.
         </p>
-      </div>
-      <div class="form-container">
+      </section>
+      <aside class="form-container">
         <header>
           <h2 class="visually-hidden">Subscription offer banner.</h2>
           <p class="form-container__banner">
@@ -42,6 +42,7 @@
               id="first-name"
               aria-describedby="first-name-error"
               placeholder="First Name"
+              autocomplete="given-name"
             />
             <span
               class="form-field__error"
@@ -58,6 +59,7 @@
               id="last-name"
               aria-describedby="last-name-error"
               placeholder="Last Name"
+              autocomplete="family-name"
             />
             <span
               class="form-field__error"
@@ -74,6 +76,7 @@
               id="email"
               aria-describedby="email-error"
               placeholder="Email Address"
+              autocomplete="email"
             />
             <span
               class="form-field__error"
@@ -111,7 +114,7 @@
             >
           </div>
         </form>
-      </div>
+      </aside>
     </main>
     <script src="script.js"></script>
   </body>
