@@ -35,7 +35,6 @@ body {
   background-color: var(--primary-red-400);
   background-blend-mode: multiply;
   color: var(--white);
-  padding: 4rem 2rem;
   /* display: flex;
   flex-direction: column;
   align-items: center;
@@ -48,6 +47,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding: 4rem 2rem;
   min-height: 100vh;
 }
 
@@ -241,7 +241,6 @@ body {
 /********************************* MEDIA QUERIES *******************/
 @media (min-width: 48rem) {
   body {
-    padding: 3rem 4rem;
     background-image: url(./images/bg-intro-desktop.png);
   }
 
@@ -289,12 +288,8 @@ body {
 }
 
 @media (min-width: 90rem) {
-  body {
-    /* flex-direction: row; */
-    gap: 3rem;
-  }
-
   .container {
+    gap: 3rem;
     flex-direction: row;
     /* margin: 2rem auto; */
   }
