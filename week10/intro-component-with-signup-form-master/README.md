@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/pattcaroline/frontend-mentor/tree/main/week10/intro-component-with-signup-form-master)
-- Live Site URL: [Add live site URL here](https://pattcaroline.github.io/frontend-mentor/week10/intro-component-with-signup-form-master/index.html)
+- Solution URL: [My form solution URL](https://github.com/pattcaroline/frontend-mentor/tree/main/week10/intro-component-with-signup-form-master)
+- Live Site URL: [My form Live URL](https://pattcaroline.github.io/frontend-mentor/week10/intro-component-with-signup-form-master/index.html)
 
 ## My process
 
