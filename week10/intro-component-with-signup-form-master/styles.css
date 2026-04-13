@@ -35,10 +35,6 @@ body {
   background-color: var(--primary-red-400);
   background-blend-mode: multiply;
   color: var(--white);
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; */
 }
 
 .container {
