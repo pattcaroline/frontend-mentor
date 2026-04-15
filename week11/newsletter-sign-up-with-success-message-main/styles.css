@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap");
+
+:root {
+  --white: #fff;
+  --grey: #949494;
+  --blue-800: #242742;
+  --blue-700: #36384d;
+  --red: #ff6155;
+
+  --gradient-1: #ff6a3a;
+  --gradient-2: #ff527b;
+
+  --font-regular: 400;
+  --font-bold: 700;
+}
+
+.hidden {
+  display: none;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100dvh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  gap: 40px;
+  min-height: 100dvh;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.hero-banner {
+  background-image: url(./assets/images/illustration-sign-up-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 0 0 16px 16px;
+  width: 100%;
+  height: 284px;
+}
+
+.form-heading {
+  display: flex;
+  flex-direction: column;
+  max-width: 327px;
+  gap: 24px;
+}
+
+.form-heading__title {
+  font-size: 40px;
+  line-height: 1;
+  font-weight: var(--font-bold);
+  color: var(--blue-800);
+}
+
+.form-heading__description,
+.form-heading__items {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--blue-800);
+}
+
+.form-heading__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+}
+
+.form-heading__items {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.form-heading__items::before {
+  content: "";
+  display: block;
+  background-image: url(./assets/images/icon-list.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 21px;
+  height: 21px;
+  flex-shrink: 0;
+  transform: translateY(0.15rem);
+  /* translateY needed to align bullet and li itens offsetting the line-height:1.5 */
+}
+
+.form-fields {
+  display: flex;
+  flex-direction: column;
+}
+
+.email-title {
+  font-weight: var(--font-bold);
+  font-size: 12px;
+  color: var(--blue-800);
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.email-input {
+  border-radius: 8px;
+  border: 1px solid var(--grey);
+  padding: 16px;
+  color: var(--grey);
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: var(--font-regular);
+  margin-bottom: 24px;
+}
+
+.form-submit__button {
+  background-color: var(--blue-800);
+  color: var(--white);
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: var(--font-bold);
+  padding: 16px;
+  display: inline-block;
+  width: 100%;
+  border-radius: 8px;
+}
