@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- [Solution URL](https://github.com/pattcaroline/frontend-mentor/blob/main/07/testimonials-grid-section-main/)
+- [Solution URL](https://github.com/pattcaroline/frontend-mentor/tree/main/07/testimonials-grid-section-main/)
 - [Live Site URL](https://pattcaroline.github.io/frontend-mentor/07/testimonials-grid-section-main/index.html)
 
 ## My process
