@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+  </head>
+  <body>
+    <main class="container">
+      <div class="hero-banner"></div>
+      <section class="form-container">
+        <header class="form-heading">
+          <h1 class="form-heading__title">Stay updated!</h1>
+          <p class="form-heading__description">
+            Join 60,000+ product managers receiving monthly updates on:
+          </p>
+          <ul class="form-heading__list">
+            <li class="form-heading__items">
+              Product discovery and building what matters
+            </li>
+            <li class="form-heading__items">
+              Measuring to ensure updates are a success
+            </li>
+            <li class="form-heading__items">And much more!</li>
+          </ul>
+        </header>
+        <form class="form-fields">
+          <label class="email-title" for="email">Email Address</label>
+          <input
+            class="email-input"
+            type="email"
+            name="email"
+            id="email"
+            autocomplete="email"
+            required
+            placeholder="email@company.com"
+            aria-describedby="email error"
+          />
+          <span class="error-message hidden" aria-live="polite"></span>
+          <div class="form-submit">
+            <button class="form-submit__button" type="submit">
+              Subscribe to monthly newsletter
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <!---------------------- SUCESS STATE ---------------->
+      <section class="success-state hidden">
+        <h1>Thanks for subscribing!</h1>
+        <p>
+          A confirmation email has been sent to
+          <span id="user-email"></span>. Please open it and click the button
+          inside to confirm your subscription.
+        </p>
+        <button id="dismiss-btn">Dismiss message</button>
+      </section>
+    </main>
+  </body>
+</html>
