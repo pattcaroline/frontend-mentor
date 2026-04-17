@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Solution URL](https://github.com/pattcaroline/frontend-mentor/tree/main/03/social-links-profile-main)
+- [Live Site URL](https://pattcaroline.github.io/frontend-mentor/03/social-links-profile-main/index.html)
 
 ## My process
 
