@@ -1,0 +1,15 @@
+@use "typography" as typo;
+@use "sass:map";
+
+@mixin text-preset($number) {
+  $preset: map.get(typo.$text-presets, $number);
+  @if $preset {
+    font-family: typo.$font-poppins;
+    font-weight: map.get($preset, weight);
+    font-size: map.get($preset, size);
+    line-height: map.get($preset, line-height);
+    letter-spacing: map.get($preset, letter-spacing);
+  } @else {
+    @error "Text preset #{$number} not found.";
+  }
+}
