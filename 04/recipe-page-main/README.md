@@ -16,12 +16,12 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./assets/04-solution.png)
 
 ### Links
 
 - [Solution URL](https://github.com/pattcaroline/frontend-mentor/tree/main/04/recipe-page-main)
-- [Live Site URL](https://your-live-site-url.com)
+- [Live Site URL](https://pattcaroline.github.io/frontend-mentor/04/recipe-page-main/index.html)
 
 ## My process
 
