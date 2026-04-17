@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- [Solution URL](https://github.com/pattcaroline/frontend-mentor/blob/main/week6/four-card-feature-section-master/index.html)
-- [Live Site URL](https://pattcaroline.github.io/frontend-mentor/week6/four-card-feature-section-master/index.html)
+- [Solution URL](https://github.com/pattcaroline/frontend-mentor/blob/main/06/four-card-feature-section-master/)
+- [Live Site URL](https://pattcaroline.github.io/frontend-mentor/06/four-card-feature-section-master/index.html)
 
 ## My process
 
