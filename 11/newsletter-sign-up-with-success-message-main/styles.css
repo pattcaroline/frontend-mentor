@@ -14,10 +14,6 @@
   --font-bold: 700;
 }
 
-.hidden {
-  display: none !important;
-}
-
 *,
 *::after,
 *::before {
@@ -153,6 +149,15 @@ body {
   width: 100%;
 }
 
+[hidden] {
+  display: none !important;
+}
+
+.error-message {
+  font-size: 12px;
+  font-weight: var(--font-bold);
+  color: var(--red);
+}
 /****************** SUCCESS STATE  ******************/
 
 .success-state {
@@ -161,7 +166,9 @@ body {
   align-items: flex-start;
   gap: 32px;
   min-height: 100dvh;
-  padding: 60px 16px;
+  padding: 60px 24px;
+  background-color: var(--white);
+  font-family: "Roboto", sans-serif;
 }
 
 .success-banner {
@@ -196,9 +203,15 @@ body {
   }
 
   .success-state {
+    border-radius: 36px;
     max-width: 504px;
     min-height: auto;
-    padding: 24px;
+    padding: 48px;
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 

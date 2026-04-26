@@ -18,7 +18,8 @@
     </title>
   </head>
   <body>
-    <main class="container">
+    <!-- SIGN UP CARD -->
+    <main class="container" id="signup-card">
       <div class="hero-banner"></div>
       <section class="form-container">
         <header class="form-heading">
@@ -46,10 +47,10 @@
             autocomplete="email"
             required
             placeholder="email@company.com"
-            aria-describedby="email error"
+            aria-describedby="email"
           />
           <span
-            id="error"
+            id="email-error"
             class="error-message hidden"
             aria-live="polite"
           ></span>
@@ -60,21 +61,20 @@
           </div>
         </form>
       </section>
-
-      <!---------------------- SUCESS STATE ---------------->
-      <section class="success-state hidden">
-        <div class="success-banner"></div>
-        <h1 class="form-dismiss__title">Thanks for subscribing!</h1>
-        <p class="form-dismiss__description">
-          A confirmation email has been sent to
-          <span id="user-email"></span>. Please open it and click the button
-          inside to confirm your subscription.
-        </p>
-        <button class="form-dismiss__button" id="dismiss-btn">
-          Dismiss message
-        </button>
-      </section>
     </main>
+    <!---------------------- SUCESS CARD ---------------->
+    <section class="success-state" id="success-card" hidden>
+      <div class="success-banner"></div>
+      <h1 class="form-dismiss__title">Thanks for subscribing!</h1>
+      <p class="form-dismiss__description">
+        A confirmation email has been sent to
+        <span id="confirmed-email"></span>. Please open it and click the button
+        inside to confirm your subscription.
+      </p>
+      <button class="form-dismiss__button" id="dismiss-btn">
+        Dismiss message
+      </button>
+    </section>
     <script src="script.js"></script>
   </body>
 </html>
