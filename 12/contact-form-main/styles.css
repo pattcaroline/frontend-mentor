@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+
+:root {
+  --grey-900: hsl(187, 24%, 22%);
+  --grey-500: hsl(186, 15%, 59%);
+  --white: hsl(0, 0%, 100%);
+  --green-600: hsl(169, 82%, 27%);
+  --green-200: hsl(148, 38%, 91%);
+  --red-errors: hsl(0, 66%, 54%);
+
+  --font-family-karla: "Karla", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1rem;
+  font-family: var(--font-family-karla);
+  accent-color: var(--green-900);
+  background-color: var(--green-200);
+  line-height: 1.6;
+  color: var(--grey-900);
+}
+
+h1,
+h2,
+p {
+  margin-block: 0;
+}
+
+input,
+button,
+textarea {
+  font: inherit;
+}
+
+.contact {
+  background-color: var(--white);
+  padding: 2.5rem;
+  border-radius: 1rem;
+  max-inline-size: 736px;
+  margin: 0 auto;
+}
+
+.contact h1 {
+  font-size: 2rem;
+  line-height: 1;
+  margin-bottom: 2rem;
+}
+
+form {
+  display: grid;
+  gap: 1rem;
+
+  @media (width > 500px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.form-group {
+  display: grid;
+  /* gap: 0.25rem; */
+  grid-auto-rows: min-content;
+  grid-template-columns: repeat(auto-fit, minmax());
+}
+
+/* Adds '*' to the 'required' fields, but not the the 'radio' required field */
+
+.form-group:has(:not([type="radio"])[required]) label,
+fieldset:has([required]) legend {
+  display: flex;
+  gap: 1ch;
+
+  &::after {
+    content: "*";
+    color: var(--green-600);
+  }
+}
+
+.form-group:has([type="radio"], [type="checkbox"]) {
+  display: flex;
+  gap: 1ch;
+}
+
+.span-all {
+  grid-column: 1/ -1;
+}
+
+input,
+textarea,
+.form-group:has([type="radio"]) {
+  border: 1px solid var(--green-600);
+  outline-color: var(--green-600);
+  border-radius: 8px;
+  padding: 0.75em 1.5em;
+}
+
+.form-group:has([type="radio"]):focus-visible {
+  outline-color: var(--green-600);
+}
+
+fieldset {
+  border: 0;
+  padding: 0;
+
+  display: grid;
+  gap: inherit;
+  grid-template-columns: inherit;
+}
+
+textarea {
+  /* content-box -> so there's 3 lines added to the textarea plus the padding appied to this area  */
+  box-sizing: content-box;
+  min-block-size: 3lh;
+  resize: block;
+}
+
+legend {
+  margin-bottom: 0.5rem;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: 1rem;
+  accent-color: var(--green-600);
+}
+
+.form-group:has([type="radio"], [type="checkbox"]) {
+  display: flex;
+  gap: 1ch;
+}
+
+.form-group:has(input[type="radio"]:checked) {
+  background: var(--green-200);
+  border-color: var(--green-600);
+}
+
+.form-group:has([type="radio"]) {
+  position: relative;
+
+  label::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+  }
+}
+
+button {
+  background: var(--green-600);
+  color: var(--white);
+  border: 0;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+}
+
+button:hover,
+button:focus-visible {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+input:user-invalid {
+  border-color: var(--red-errors);
+}
+
+.error-message {
+  color: var(--red-errors);
+}
+
+.error-message:empty {
+  display: none;
+}
