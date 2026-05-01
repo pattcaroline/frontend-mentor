@@ -1,5 +1,5 @@
 const form = document.querySelector("form");
-
+const successMessage = document.getElementById("success-message");
 function validateField(field) {
   const errorEl =
     field.type === "radio"
@@ -39,6 +39,7 @@ form.addEventListener("submit", function (e) {
 
   if (isValid) {
     //send form data
+    successMessage.classList.toggle("hidden");
     form.reset();
   } else {
     // brings cursor back to fix the last field error

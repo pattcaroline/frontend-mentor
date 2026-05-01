@@ -183,6 +183,10 @@ input:user-invalid {
 
 /* SUCCESS MESSAGE */
 
+.hidden {
+  display: none;
+}
+
 .success-message {
   background-color: var(--grey-900);
   min-width: 450px;
