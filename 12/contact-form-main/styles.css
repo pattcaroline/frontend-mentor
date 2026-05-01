@@ -46,6 +46,7 @@ textarea {
   border-radius: 1rem;
   max-inline-size: 736px;
   margin: 0 auto;
+  position: relative;
 }
 
 .contact h1 {
@@ -66,6 +67,7 @@ form {
 .form-group {
   display: grid;
   /* gap: 0.25rem; */
+  /* min-content -> makes the rows expand properly when there's error message below the input */
   grid-auto-rows: min-content;
   grid-template-columns: repeat(auto-fit, minmax());
 }
@@ -85,6 +87,7 @@ fieldset:has([required]) legend {
 
 .form-group:has([type="radio"], [type="checkbox"]) {
   display: flex;
+  align-items: center;
   gap: 1ch;
 }
 
@@ -161,8 +164,10 @@ button {
 
 button:hover,
 button:focus-visible {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: var(--grey-900);
 }
+
+/* ERROR styling */
 
 input:user-invalid {
   border-color: var(--red-errors);
@@ -174,4 +179,40 @@ input:user-invalid {
 
 .error-message:empty {
   display: none;
+}
+
+/* SUCCESS MESSAGE */
+
+.success-message {
+  background-color: var(--grey-900);
+  min-width: 450px;
+  color: white;
+
+  padding: 24px;
+  border-radius: 12px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.success-text {
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.success-text img {
+  width: 24px;
+  height: 24px;
+}
+
+.success-description {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--green-200);
 }

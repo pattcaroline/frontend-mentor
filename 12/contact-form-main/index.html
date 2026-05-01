@@ -23,19 +23,25 @@
         <div class="form-group">
           <label for="fname">First Name</label>
           <input type="text" id="fname" name="first_name" required />
-          <span class="error-message"></span>
+          <span class="error-message" aria-live="polite"></span>
         </div>
 
         <div class="form-group">
           <label for="lname">Last Name</label>
           <input type="text" id="lname" name="last_name" required />
-          <span class="error-message"></span>
+          <span class="error-message" aria-live="polite"></span>
         </div>
 
         <div class="form-group span-all">
           <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" required />
-          <span class="error-message"></span>
+          <input
+            type="email"
+            data-error="Please enter a valid email address"
+            id="email"
+            name="email"
+            required
+          />
+          <span class="error-message" aria-live="polite"></span>
         </div>
 
         <fieldset class="span-all">
@@ -60,35 +66,40 @@
             />
             <label for="support">Support Request</label>
           </div>
-          <span class="error-message"></span>
+          <span class="error-message" aria-live="polite"></span>
         </fieldset>
 
         <div class="form-group span-all">
           <label for="message">Message</label>
           <textarea name="message" id="message" required></textarea>
-          <span class="error-message"></span>
+          <span class="error-message" aria-live="polite"></span>
         </div>
 
         <div class="form-group span-all">
-          <input type="checkbox" name="consent" id="consent" required />
+          <input
+            type="checkbox"
+            data-error="To submit this form, please consent to being contacted"
+            name="consent"
+            id="consent"
+            required
+          />
           <label for="consent">I consent to being contacted by the team</label>
-          <span class="error-message"></span>
+          <span class="error-message" aria-live="polite"></span>
         </div>
         <button class="span-all">Submit</button>
       </form>
+      <section class="success-message hidden">
+        <div class="success-text">
+          <img
+            src="./assets/images/icon-success-check.svg"
+            alt="Success icon symbol"
+          />
+          <p>Message Sent!</p>
+        </div>
+        <p class="success-description">
+          Thanks for completing the form. We'll be in touch soon!
+        </p>
+      </section>
     </main>
-
-    <!-- 
-    
-    This field is required 
-    This field is required 
-    Please enter a valid email address/ This field is required 
-    Please select a query type 
-    This field is required 
-    To submit this form, please consent to being contacted 
-    
-    //SUCCESS MESSAGE
-    Submit Message Sent! Thanks for completing
-    the form. We'll be in touch soon! -->
   </body>
 </html>
