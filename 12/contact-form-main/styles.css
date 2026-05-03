@@ -22,10 +22,16 @@
 body {
   font-size: 1rem;
   font-family: var(--font-family-karla);
-  accent-color: var(--green-900);
+  accent-color: var(--grey-900);
   background-color: var(--green-200);
   line-height: 1.6;
   color: var(--grey-900);
+  padding: 1rem 0.5rem;
+  min-height: 100dvh;
+
+  @media (width > 500px) {
+    padding: 8rem 1rem;
+  }
 }
 
 h1,
@@ -198,6 +204,12 @@ input:user-invalid {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+
+  @media (width > 500px) {
+    top: -15%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .success-text {
