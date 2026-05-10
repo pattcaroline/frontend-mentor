@@ -62,6 +62,7 @@ a:active {
 
   --navy-950: hsl(226, 43%, 10%);
   --navy-900: hsl(235, 46%, 20%);
+  --navy-800: hsl(235, 41, 34);
   --navy-200: hsl(236, 100%, 87%);
   --purple-500: hsl(235, 45%, 61%);
   --white: hsl(0, 0%, 100%);
@@ -161,9 +162,15 @@ body {
 .activity-tracker__option-btn {
   width: max-content;
   color: var(--purple-500);
+  font-family: inherit;
   font-size: 1.8rem;
   font-weight: var(--fw-regular);
   line-height: 2.1rem;
+}
+
+.activity-tracker__option-btn.active,
+.activity-tracker__option-btn:hover {
+  color: var(--white);
 }
 
 .card-activity {
