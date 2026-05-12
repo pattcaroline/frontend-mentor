@@ -256,8 +256,8 @@ body {
 
 .dropdown__options {
   display: flex;
-  flex-direction: column;
-  gap: 5px;
+  flex-direction: row-reverse;
+  gap: var(--spacing-100);
   background: rgba(15, 20, 36, 0.99);
   padding: 12px;
   border-radius: 8px;
@@ -390,6 +390,11 @@ p,
   .card-activity__current-timeframe {
     font-size: 5.6rem;
     line-height: 6.6rem;
+  }
+
+  .dropdown__options {
+    flex-direction: column;
+    gap: 5px;
   }
 }
 
