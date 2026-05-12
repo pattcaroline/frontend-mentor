@@ -62,7 +62,7 @@ a:active {
 
   --navy-950: hsl(226, 43%, 10%);
   --navy-900: hsl(235, 46%, 20%);
-  --navy-800: hsl(235, 41, 34);
+  --navy-800: hsl(235, 41%, 34%);
   --navy-200: hsl(236, 100%, 87%);
   --purple-500: hsl(235, 45%, 61%);
   --white: hsl(0, 0%, 100%);
@@ -182,6 +182,11 @@ body {
   position: relative;
 }
 
+.card-activity__info:hover {
+  background: var(--navy-800);
+  transition: 0.4s ease;
+}
+
 .card-activity__bg-img {
   background: var(--orange-300-work);
   margin-bottom: -15px;
@@ -193,6 +198,8 @@ body {
   overflow: visible;
   position: relative;
   z-index: 1;
+  padding-right: var(--spacing-300);
+  flex-shrink: 0;
 }
 
 .card-activity__bg-img img {
@@ -229,6 +236,58 @@ body {
   font-weight: var(--fw-medium);
   font-size: 18px;
   line-height: 21px;
+}
+
+.card-activity__dropdown {
+  position: relative;
+}
+
+.card-activity__dropdown button {
+  cursor: pointer;
+}
+
+.dropdown {
+  visibility: hidden;
+}
+
+.dropdown.open {
+  visibility: visible;
+}
+
+.dropdown__options {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: rgba(15, 20, 36, 0.99);
+  padding: 12px;
+  border-radius: 8px;
+  position: absolute;
+  font-size: 13px;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.align-end {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.dropdown__option-btn,
+.dropdown__options i {
+  width: max-content;
+  color: var(--purple-500);
+  font-family: inherit;
+  font-size: 1.8rem;
+  font-weight: var(--fw-light);
+  line-height: 2.1rem;
+}
+
+.dropdown__option-btn:hover,
+.dropdown__options i:hover {
+  color: var(--white);
 }
 
 .card-activity__timeframes {
