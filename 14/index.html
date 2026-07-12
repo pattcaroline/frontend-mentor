@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body
+    class="bg-grey-200 font-mono md:min-h-screen flex flex-col justify-center items-center text-base/6"
+  >
+    <!-- LOGO -->
+    <img src="images/logo.svg" alt="" class="p-8 lg:p-16" />
+
+    <!-- MAIN CONTAINER -->
+    <main
+      class="bg-white grid grid-cols-1 w-full py-8 px-6 rounded-t-3xl md:rounded-3xl md:py-12 md:px-20 md:w-xl lg:grid-cols-2 lg:w-4xl lg:p-8 lg:gap-12"
+    >
+      <!-- BILL SECTION -->
+      <section
+        class="flex flex-col gap-8 mb-8 lg:gap-10 lg:mb-0 lg:justify-between"
+      >
+        <div id="bill-group">
+          <!-- Header row for both header and error message hidden -->
+          <div class="flex items-center justify-between mb-2">
+            <label for="bill" class="font-bold text-grey-500 inline-block"
+              >Bill</label
+            >
+            <span
+              id="bill-error"
+              class="hidden text-base/6 font-bold text-orange-400"
+              >Can't be zero
+            </span>
+          </div>
+          <div
+            id="bill-input-container"
+            class="flex flex-row justify-between items-center bg-grey-50 text-grey-300 rounded-lg px-4 py-2"
+          >
+            <img
+              src="images/icon-dollar.svg"
+              alt="icon-dollar"
+              class="h-4 w-auto object-contain"
+            />
+
+            <input
+              id="bill-input"
+              type="number"
+              placeholder="0"
+              class="placeholder:text-grey-300 font-bold text-2xl/9 text-end w-full bg-transparent text-green-900 focus:outline-none [appearance:textfield]"
+            />
+          </div>
+        </div>
+
+        <!-- Tip Percentage -->
+        <div>
+          <label class="font-bold text-grey-500 inline-block mb-2"
+            >Select Tip %</label
+          >
+          <div
+            id="select-tips"
+            class="grid grid-cols-2 gap-4 font-bold text-2xl/9 md:grid-cols-3"
+          >
+            <button
+              data-tip="5"
+              class="bg-green-900 text-white rounded-md px-4 py-2 hover:bg-green-400 hover:text-green-900 transition-colors duration-200 cursor-pointer"
+            >
+              5%
+            </button>
+            <button
+              data-tip="10"
+              class="bg-green-900 text-white rounded-md px-4 py-2 hover:bg-green-400 hover:text-green-900 transition-colors duration-200 cursor-pointer"
+            >
+              10%
+            </button>
+            <button
+              data-tip="15"
+              class="bg-green-900 text-white rounded-md px-4 py-2 hover:bg-green-400 hover:text-green-900 transition-colors duration-200 cursor-pointer"
+            >
+              15%
+            </button>
+            <button
+              data-tip="25"
+              class="bg-green-900 text-white rounded-md px-4 py-2 hover:bg-green-400 hover:text-green-900 transition-colors duration-200 cursor-pointer"
+            >
+              25%
+            </button>
+            <button
+              data-tip="50"
+              class="bg-green-900 text-white rounded-md px-4 py-2 hover:bg-green-400 hover:text-green-900 transition-colors duration-200 cursor-pointer"
+            >
+              50%
+            </button>
+            <input
+              type="number"
+              id="custom-tip-input"
+              placeholder="Custom"
+              class="bg-grey-50 text-center font-bold text-green-900 placeholder:text-grey-500 text-2xl/9 w-full rounded-md px-4 py-2 focus:outline-none focus:ring-2"
+            />
+          </div>
+        </div>
+
+        <!-- Number of People -->
+        <div id="people-group">
+          <!-- Header row for both header and error message hidden -->
+          <div class="flex items-center justify-between mb-2">
+            <label for="numPeople" class="font-bold text-grey-500 inline-block"
+              >Number of People</label
+            >
+            <span
+              id="people-error"
+              class="hidden text-base/6 font-bold text-orange-400"
+              >Can't be zero
+            </span>
+          </div>
+          <div
+            id="people-input-container"
+            class="flex flex-row justify-between items-center bg-grey-50 text-grey-300 rounded-lg px-4 py-2"
+          >
+            <img
+              src="images/icon-person.svg"
+              alt="icon-person"
+              class="h-auto object-cover"
+            />
+
+            <input
+              type="number"
+              name="numPeople"
+              id="numPeople"
+              placeholder="0"
+              class="placeholder:text-grey-300 font-bold text-2xl/9 text-end w-full bg-transparent text-green-900 focus:outline-none"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-------------------------- TIP SECTION ----------------------------->
+      <section class="flex flex-col bg-green-900 rounded-2xl p-6">
+        <div class="flex flex-col gap-6 mb-8 lg:mb-32">
+          <!-- Tip Amount Row -->
+          <div class="flex flex-row justify-between items-center">
+            <div>
+              <h2 class="font-bold text-white text-base/6">Tip Amount</h2>
+              <span class="font-bold text-grey-400 text-sm/5">/ person</span>
+            </div>
+            <span
+              id="tip-amount"
+              class="font-bold text-green-400 text-[32px] md:text-5xl/18"
+            ></span>
+          </div>
+
+          <!-- Total Amount Row -->
+          <div class="flex flex-row justify-between items-center">
+            <div>
+              <h2 class="font-bold text-white text-base/6">Total</h2>
+              <span class="font-bold text-grey-400 text-sm/5">/ person</span>
+            </div>
+            <span
+              id="total-amount"
+              class="font-bold text-green-400 text-[32px] md:text-5xl/18"
+            ></span>
+          </div>
+        </div>
+
+        <!-- Reset Button  -->
+        <button
+          id="reset-btn"
+          class="bg-green-400 text-green-900 font-bold text-[20px]/[30px] uppercase mt-auto rounded-md px-8 py-2 md:px-10 md:p hover:bg-green-200 transition-colors cursor-pointer"
+        >
+          Reset
+        </button>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
