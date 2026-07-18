@@ -1,0 +1,125 @@
+:root {
+  /* COLORS */
+  --white-color: #ffffff;
+  --black-color: #000000;
+
+  --grey-950: #08070b;
+  --grey-900: #14131b;
+  --grey-850: #18171f;
+  --grey-800: #24232c;
+  --grey-700: #54535b;
+  --grey-600: #817d92;
+  --grey-200: #e6e5ea;
+
+  --green-200: #a4ffaf;
+
+  --yellow-300: #f8cd65;
+
+  --orange-400: #fb7c58;
+
+  --red-500: #f64a4a;
+
+  /* FONT */
+  --font: "JetBrains Mono", monospace;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--black-color);
+  font-family: var(--font);
+  font-weight: bold;
+}
+
+.password-title {
+  font-size: 1rem;
+  line-height: 20px;
+  color: var(--grey-600);
+  margin-bottom: 1rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 90%;
+}
+
+.password-display-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--grey-700);
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+  background-color: var(--grey-800);
+  font-size: 1.5rem;
+  line-height: 32px;
+}
+
+.copy-container img {
+  color: var(--green-200);
+  height: 20px;
+  width: auto;
+}
+
+.password-form-section {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--grey-800);
+  color: var(--white-color);
+  font-size: 1rem;
+  line-height: 20px;
+  padding: 1rem;
+}
+
+.char-length-section {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.5rem;
+}
+.char-length-section__range {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+  padding: 0.5rem;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: var(--grey-850);
+  height: 8px;
+  border-radius: 4px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Crucial: clears default thumb */
+  appearance: none;
+  margin-top: -6px; /* Centers thumb vertically over an 8px track */
+  background-color: var(--white-color);
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  transition: background 0.15s ease;
+}

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Password generator app</title>
+  </head>
+  <body>
+    <h1 class="password-title">Password Generator</h1>
+    <main class="container">
+      <section class="password-result-section">
+        <div class="password-display-section">
+          <p id="password-display">P4$5W0rD!</p>
+          <div class="copy-container">
+            <span id="copy-message" class="copy-message"></span>
+            <img
+              id="copy-password"
+              src="./assets/images/icon-copy.svg"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+      <form id="password-form" class="password-form-section">
+        <div class="char-length-section">
+          <div class="char-length-section__range">
+            <label for="char-length">Character Length</label>
+            <input
+              id="char-length"
+              type="number"
+              placeholder="0"
+              min="1"
+              max="14"
+              value="7"
+            />
+          </div>
+          <input id="range-length" type="range" min="1" max="14" value="7" />
+        </div>
+        <div>
+          <input id="uppercase" type="checkbox" checked />
+          <label for="uppercase">Include Uppercase Letters</label>
+        </div>
+        <div>
+          <input id="lowercase" type="checkbox" checked />
+          <label for="lowercase">Include Lowercase Letters</label>
+        </div>
+        <div>
+          <input id="numbers" type="checkbox" checked />
+          <label for="numbers">Include Numbers</label>
+        </div>
+        <div>
+          <input id="symbols" type="checkbox" checked />
+          <label for="symbols">Include Symbols</label>
+        </div>
+        <div>
+          <h2>Strength</h2>
+          <span id="strength-category"></span>
+          <div id="strength-bars-container">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+        </div>
+        <button type="submit">Generate</button>
+      </form>
+    </main>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
