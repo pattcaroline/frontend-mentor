@@ -92,34 +92,120 @@ body {
   width: 100%;
   gap: 0.5rem;
 }
+
 .char-length-section__range {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: auto;
-  padding: 0.5rem;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+  background: transparent;
+  border: none;
+  width: auto;
+  max-width: 2rem;
+  color: var(--green-200);
+  font-family: inherit;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  outline: none;
+  pointer-events: none;
+}
+
+/* Removes number up and down arrows on safari browsers */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 input[type="range"] {
   -webkit-appearance: none;
   appearance: none;
   cursor: pointer;
+  height: 28px;
+  background-color: var(--grey-800);
 }
 
 input[type="range"]::-webkit-slider-runnable-track {
   background-color: var(--grey-850);
+  width: auto;
   height: 8px;
   border-radius: 4px;
 }
 
 input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none; /* Crucial: clears default thumb */
+  -webkit-appearance: none; /* clears default thumb */
   appearance: none;
-  margin-top: -6px; /* Centers thumb vertically over an 8px track */
-  background-color: var(--white-color);
+  margin-top: -10px; /* Centers thumb vertically over an 8px track; height: 28px */
+  background: var(--white-color);
   height: 28px;
   width: 28px;
   border-radius: 50%;
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-  transition: background 0.15s ease;
+  /* box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  transition: background 0.15s ease; */
 }
+
+.btns-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+
+  gap: 1rem;
+  padding: 2rem 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+}
+
+/* Checkbox styling */
+
+input[type="checkbox"] {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  border: 2px solid var(--white-color);
+  height: 20px;
+  width: 20px;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  transition:
+    background-color 0.1s,
+    border-color 0.1s;
+}
+
+input[type="checkbox"]::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 12px;
+  border: solid var(--grey-850);
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+  margin-top: -2px;
+  opacity: 0;
+  transition: opacity 0.1s ease-in-out;
+}
+
+input[type="checkbox"]:checked {
+  background-color: var(--green-200);
+  border: 2px solid var(--green-200);
+}
+
+input[type="checkbox"]:checked::after {
+  opacity: 1;
+}
+
+/* STRENGTH Box Styling */
