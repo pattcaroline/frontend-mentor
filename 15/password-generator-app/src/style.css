@@ -209,3 +209,61 @@ input[type="checkbox"]:checked::after {
 }
 
 /* STRENGTH Box Styling */
+
+.strength-container {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  background-color: var(--grey-850);
+  padding: 0.875rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.strength-container-title {
+  color: var(--grey-600);
+  text-transform: uppercase;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  flex: 1;
+  align-self: center;
+}
+
+.strength-result-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+}
+
+.strength-bars-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.bar {
+  border: 2px solid var(--white-color);
+  height: 28px;
+  width: 10px;
+}
+
+.submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--green-200);
+  color: var(--black-color);
+  padding: 16px 104px;
+  font-size: 1rem;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-family: inherit;
+  font-weight: bold;
+  border: none;
+}
+
+.weak {
+  background-color: var(--red-500);
+}

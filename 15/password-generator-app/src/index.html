@@ -46,7 +46,7 @@
         </div>
         <div class="btns-container">
           <div class="checkbox-container">
-            <input id="uppercase" type="checkbox" />
+            <input id="uppercase" type="checkbox" checked />
             <label for="uppercase">Include Uppercase Letters</label>
           </div>
           <div class="checkbox-container">
@@ -62,17 +62,22 @@
             <label for="symbols">Include Symbols</label>
           </div>
         </div>
-        <div>
-          <h2>Strength</h2>
-          <span id="strength-category"></span>
-          <div id="strength-bars-container">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
+        <div class="strength-container">
+          <h2 class="strength-container-title">Strength</h2>
+          <div class="strength-result-box">
+            <span id="strength-category" class="strength-category"></span>
+            <div id="strength-bars-container" class="strength-bars-container">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
           </div>
         </div>
-        <button type="submit">Generate</button>
+        <button type="submit" class="submit-btn">
+          Generate&nbsp;
+          <img src="./assets/images/icon-arrow-right.svg" alt="" />
+        </button>
       </form>
     </main>
     <script type="module" src="script.js"></script>
