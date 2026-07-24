@@ -264,6 +264,22 @@ input[type="checkbox"]:checked::after {
   border: none;
 }
 
-.weak {
+.too-weak {
   background-color: var(--red-500);
+  border: none;
+}
+
+.weak {
+  background-color: var(--orange-400);
+  border: none;
+}
+
+.medium {
+  background-color: var(--yellow-300);
+  border: none;
+}
+
+.strong {
+  background-color: var(--green-200);
+  border: none;
 }
