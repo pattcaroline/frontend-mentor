@@ -3,83 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.8.11/tailwind.min.css"
+      integrity="sha512-KO1h5ynYuqsFuEicc7DmOQc+S9m2xiCKYlC3zcZCSEw0RGDsxcMnppRaMZnb0DdzTDPaW22ID/gAGCZ9i+RT/w=="
+      crossorigin="anonymous"
+    /> -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Press+Start+2P&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-
-    <title>Frontend Mentor | Password generator app</title>
+    <title>50 Day Project - Dice Roller</title>
   </head>
   <body>
-    <h1 class="password-title">Password Generator</h1>
-    <main class="container">
-      <section class="password-result-section">
-        <div class="password-display-section">
-          <p id="password-display">P4$5W0rD!</p>
-          <div class="copy-container">
-            <span id="copy-message" class="copy-message"></span>
-            <img
-              id="copy-password"
-              src="./assets/images/icon-copy.svg"
-              alt=""
-            />
-          </div>
-        </div>
-      </section>
-      <form id="password-form" class="password-form-section">
-        <div class="char-length-section">
-          <div class="char-length-section__range">
-            <label for="char-length">Character Length</label>
-            <input
-              id="char-length"
-              type="number"
-              placeholder="0"
-              min="4"
-              max="14"
-              value="7"
-            />
-          </div>
-          <input id="range-length" type="range" min="4" max="14" value="7" />
-        </div>
-        <div class="btns-container">
-          <div class="checkbox-container">
-            <input id="uppercase" type="checkbox" checked />
-            <label for="uppercase">Include Uppercase Letters</label>
-          </div>
-          <div class="checkbox-container">
-            <input id="lowercase" type="checkbox" checked />
-            <label for="lowercase">Include Lowercase Letters</label>
-          </div>
-          <div class="checkbox-container">
-            <input id="numbers" type="checkbox" checked />
-            <label for="numbers">Include Numbers</label>
-          </div>
-          <div class="checkbox-container">
-            <input id="symbols" type="checkbox" checked />
-            <label for="symbols">Include Symbols</label>
-          </div>
-        </div>
-        <div class="strength-container">
-          <h2 class="strength-container-title">Strength</h2>
-          <div class="strength-result-box">
-            <span id="strength-category" class="strength-category"></span>
-            <div id="strength-bars-container" class="strength-bars-container">
-              <div class="bar"></div>
-              <div class="bar"></div>
-              <div class="bar"></div>
-              <div class="bar"></div>
-            </div>
-          </div>
-        </div>
-        <button type="submit" class="submit-btn">
-          Generate&nbsp;
-          <img src="./assets/images/icon-arrow-right.svg" alt="" />
-        </button>
-      </form>
-    </main>
-    <script type="module" src="script.js"></script>
+    <div class="container">
+      <h1>Dice Roller</h1>
+      <div class="dice" id="dice">?</div>
+      <button class="roll-btn" id="rollBtn">Roll the Dice</button>
+      <div class="result" id="result"></div>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>
