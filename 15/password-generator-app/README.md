@@ -53,12 +53,6 @@ This project was very challenging especially when I was creating the javascript 
 
 For this project, I decided to code using CSS only. The most challenging part was to style the input range.
 
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-
 ```js
 // Function to syncronize input and range to have the same value
 function syncCharacterAmount(e) {
@@ -74,7 +68,7 @@ I will continue improving form elements and styling of the elements inside a for
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- [Clamp on JavaScript](https://dev.to/timothee/quick-and-easy-value-clamping-13jc) - This helped me understand clamping on javascript. I applied this on the range input min and max.
 
 ### AI Collaboration
 
