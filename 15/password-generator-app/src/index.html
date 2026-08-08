@@ -20,7 +20,11 @@
         <div class="password-display-section">
           <p id="password-display">P4$5W0rD!</p>
           <div class="copy-container">
-            <span id="copy-message" class="copy-message"></span>
+            <span
+              id="copy-message"
+              class="copy-message"
+              aria-live="polite"
+            ></span>
             <img
               id="copy-password"
               src="./assets/images/icon-copy.svg"
@@ -36,7 +40,7 @@
             <input
               id="char-length"
               type="number"
-              placeholder="0"
+              placeholder="7"
               min="4"
               max="14"
               value="7"
@@ -65,7 +69,11 @@
         <div class="strength-container">
           <h2 class="strength-container-title">Strength</h2>
           <div class="strength-result-box">
-            <span id="strength-category" class="strength-category"></span>
+            <span
+              id="strength-category"
+              class="strength-category"
+              aria-live="polite"
+            ></span>
             <div id="strength-bars-container" class="strength-bars-container">
               <div class="strength-meter__bar"></div>
               <div class="strength-meter__bar"></div>

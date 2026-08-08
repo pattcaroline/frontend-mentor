@@ -27,6 +27,9 @@ const SYMBOL_CHARACTERS = arrayFromLowToHigh(33, 47)
 charLengthEl.addEventListener("input", syncCharacterAmount);
 rangeEl.addEventListener("input", syncCharacterAmount);
 
+// Call function on initial load to add green progress input range
+updateSliderTrack();
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -75,10 +78,15 @@ function passwordGenerator(
   // Add one guaranteed character checked by user
   if (includeUppercase) {
     charCodesPool = charCodesPool.concat(UPPERCASE_CHARACTERS);
+
+    // Getting a random number within the reference from the characters allowed
     const randomUpper =
       UPPERCASE_CHARACTERS[
         Math.floor(Math.random() * UPPERCASE_CHARACTERS.length)
       ];
+
+    //Pushing the selected character into the final array
+    // randomUpper passed the number reference into String.fromCharCode to display the character
     passwordCharactersFinal.push(String.fromCharCode(randomUpper));
   }
 
@@ -137,11 +145,30 @@ function arrayFromLowToHigh(low, high) {
   return array;
 }
 
+// Function to update the range input track; Adds neon-green behind the thumb range
+function updateSliderTrack() {
+  const min = parseFloat(rangeEl.min) || 4;
+  const max = parseFloat(rangeEl.max) || 14;
+  const val = parseFloat(rangeEl.value);
+
+  // Calculate percentage
+  const percentage = ((val - min) / (max - min)) * 100;
+
+  // Apply linear-gradient background (filled color up to percentage, empty after)
+  rangeEl.style.background = `linear-gradient(90deg, #a4ffaf ${percentage}%, #18171f ${percentage}%)`;
+}
+
 // Function to syncronize input and range to have the same value
 function syncCharacterAmount(e) {
   const characterValue = e.target.value;
   charLengthEl.value = characterValue;
   rangeEl.value = characterValue;
+  const min = Number(charLengthEl.min);
+  const max = Number(charLengthEl.max);
+
+  console.log(Math.max(min, Math.min(max, characterValue)));
+
+  updateSliderTrack();
 }
 
 // CLIPBOARD - copy passwordDisplay text content into clipboard
@@ -185,7 +212,6 @@ function updateStrengthUI(score) {
 
   const currentConfig = strengthMap[score];
   strengthTextEl.textContent = currentConfig.text;
-  console.log(strengthTextEl);
 
   // Loop through all 4 bars and color them dynamically
   barElements.forEach((bar, index) => {
