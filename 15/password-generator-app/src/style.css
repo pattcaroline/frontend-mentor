@@ -85,6 +85,8 @@ body {
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  background-color: transparent;
+  border: none;
 }
 
 .copy-container img {
@@ -138,7 +140,7 @@ input[type="number"] {
   font-family: inherit;
   font-size: 1.5rem;
   line-height: 2rem;
-  outline: none;
+  /* outline: none; */
   cursor: pointer;
 }
 
@@ -217,7 +219,6 @@ input[type="range"]::-moz-range-progress {
   display: flex;
   flex-direction: column;
   justify-content: start;
-
   gap: 1rem;
   padding: 2rem 0;
   font-size: 1rem;
@@ -242,7 +243,6 @@ input[type="checkbox"] {
   border: 2px solid var(--white-color);
   height: 20px;
   width: 20px;
-  outline: none;
   cursor: pointer;
   position: relative;
   transition:
@@ -277,7 +277,6 @@ input[type="checkbox"]:checked::after {
 .strength-container {
   display: flex;
   flex-direction: row;
-  /* justify-content: space-between; */
   background-color: var(--grey-850);
   padding: 0.875rem 1rem;
   margin-bottom: 1rem;

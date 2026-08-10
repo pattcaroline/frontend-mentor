@@ -159,15 +159,22 @@ function updateSliderTrack() {
 }
 
 // Function to syncronize input and range to have the same value
+// Also this function set a ceiling (max) and floor (min) for valid input number (4 - 14)
 function syncCharacterAmount(e) {
   const characterValue = e.target.value;
-  charLengthEl.value = characterValue;
-  rangeEl.value = characterValue;
-  const min = Number(charLengthEl.min);
-  const max = Number(charLengthEl.max);
+  // grabbing min and max value from input
+  const min = charLengthEl.min;
+  const max = charLengthEl.max;
+  // assigning valid number input to the clamped variable
+  // if number 99 -> ceiling is set to 14 automatically;
+  // number 2 -> floor is set to 4 automatically
+  const clamped = Math.max(min, Math.min(max, characterValue));
 
-  console.log(Math.max(min, Math.min(max, characterValue)));
+  // passing correct validated input number to keep range and number input in sync
+  charLengthEl.value = clamped;
+  rangeEl.value = clamped;
 
+  // update the progress range bar according to the length of the password choosen between 4 and 14
   updateSliderTrack();
 }
 
