@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](/password-generator-screenshot.png)
 
 ### Links
 
@@ -55,10 +55,23 @@ For this project, I decided to code using CSS only. The most challenging part wa
 
 ```js
 // Function to syncronize input and range to have the same value
+// Also this function set a ceiling (max) and floor (min) for valid input number (4 - 14)
 function syncCharacterAmount(e) {
   const characterValue = e.target.value;
-  charLengthEl.value = characterValue;
-  rangeEl.value = characterValue;
+  // grabbing min and max value from input
+  const min = charLengthEl.min;
+  const max = charLengthEl.max;
+  // assigning valid number input to the clamped variable
+  // if number 99 -> ceiling is set to 14 automatically;
+  // number 2 -> floor is set to 4 automatically
+  const clamped = Math.max(min, Math.min(max, characterValue));
+
+  // passing correct validated input number to keep range and number input in sync
+  charLengthEl.value = clamped;
+  rangeEl.value = clamped;
+
+  // update the progress range bar according to the length of the password choosen between 4 and 14
+  updateSliderTrack();
 }
 ```
 
@@ -72,11 +85,7 @@ I will continue improving form elements and styling of the elements inside a for
 
 ### AI Collaboration
 
-Describe how you used AI tools (if any) during this project. This helps demonstrate your ability to work effectively with AI assistants.
-
-- What tools did you use (e.g., ChatGPT, Claude, GitHub Copilot)?
-- How did you use them (e.g., debugging, generating boilerplate, brainstorming solutions)?
-- What worked well? What didn't?
+I used Claude to help me build the function syncCharacterAmount. Claude was a mentor and guided me when I got stuck understanding the clamp concepts. I'm very satisfied how I was able to create that function.
 
 ## Author
 
